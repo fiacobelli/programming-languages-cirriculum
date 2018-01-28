@@ -1,0 +1,85 @@
+
+
+evaluation
+math
+
+
+
+
+
+== What is not a programming language
+HTML problem
+Markup Languages
+hybrid languages
+DSL
+
+
+
+## Part1 - Concepts
+* Syntax
+* naming/Binding
+* scope
+* datatypes
+* Statements and control structures
+* subprogramming
+* structured, functional langs (functions as first class citzens), oo langs, imperative langs, blended
+Overview of Programming Languages
+Syntax and Semantics
+Variables and bindings
+Data Types
+Expressions
+Subprograms
+Object Oriented Programming
+Functional programming Languages
+Logic programming Languages
+
+
+
+We can use pen and paper for this to illustrate concepts
+
+
+
+### Pre-requisites
+* Basics of coding
+* Working knowledge of at least one language
+* Boolean logic
+
+### Definition of terms and topics
+* Functional
+* Declarative programming
+* Scripting
+* Systems
+* Abastraction, Data, and Control (http://cs242.stanford.edu/assets/slides/01.1-intro.pdf)
+* Compilers and interpreters
+** compiled vs. interpreted
+** What is the JVM?
+** How about LLVM??
+* Package managers
+* Type systems
+** Static vs. dynamic typing
+* Parallelism
+* scoping
+* closures
+* Blocks
+* Type inference
+* Objects and classes
+* functions and methods
+* Markup languages and DSL
+
+
+### Syntax and Semantics
+* talk about components
+
+
+### Names, Binding and scope
+
+### Data Types
+
+
+
+### Statements
+* expressions
+* assignments
+* control structures
+
+### Subprograms

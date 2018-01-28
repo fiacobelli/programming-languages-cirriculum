@@ -1,0 +1,9 @@
+= Computational model
+
+* instructions
+* operations
+* computation
+* input
+* output
+
+http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm

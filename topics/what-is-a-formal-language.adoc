@@ -1,0 +1,4 @@
+= What is a Formal language
+a formal language is a set of strings of symbols together with a set of rules that are specific to it.
+
+https://en.wikipedia.org/wiki/Formal_language

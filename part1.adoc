@@ -1,0 +1,26 @@
+= Part 1 - Concepts
+
+== Outline
+
+. What is a programming language?
+.. Programming language Definition
+.. Formal Language
+.. computational model
+... instructions
+... operations
+... computation
+... output
+... input
+.. algorithms
+.. programs
+.. syntax
+.. semantics
+.. abstraction
+.. generalization
+
+
+include::topics/what-is-a-programming-language.adoc[leveloffset+=1]
+
+include::topics/what-is-a-formal-language.adoc[leveloffset+=1]
+
+include::topics/computational-model.adoc[leveloffset+=1]
