@@ -1,5 +1,5 @@
 :toc: left
-
+:toclevels: 1
 = Part 1 - Concepts
 
 include::topics/what-is-a-programming-language.adoc[leveloffset=+1]
@@ -20,24 +20,14 @@ include::topics/semantics.adoc[leveloffset=+1]
 
 include::topics/name-binding-scope.adoc[leveloffset=+1]
 
+include::topics/datatypes.adoc[leveloffset=+1]
 
+include::topics/expressions-and-assignments.adoc[leveloffset=+1]
 
+include::topics/statement-level-control-structures.adoc[leveloffset=+1]
 
-* datatypes
-* Statements and control structures
-* subprogramming
-* structured, functional langs (functions as first class citzens), oo langs, imperative langs, blended
-Overview of Programming Languages
+include::topics/subprograms.adoc[leveloffset=+1]
 
+include::topics/abstraction-encaps-general.adoc[leveloffset=+1]
 
-Data Types
-Expressions
-Subprograms
-Object Oriented Programming
-Functional programming Languages
-Logic programming Languages
-
-
-
-. abstraction
-. generalization
+includes::topics/approaches.adoc[leveloffset=+1]

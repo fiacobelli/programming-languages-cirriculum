@@ -1,0 +1,38 @@
+= Datatypes
+
+Definition: collection of values and operations you can perform on those values
+
+Why do we care about types?
+
+Breakdown of types:
+* numberic
+** int
+** floating point
+* boolean
+* character
+* strings
+** c-strings
+** other strings
+* ordinal types
+* user-defined types
+** enums
+* array
+** array implementations
+** array operationns
+* associative arrays
+** key-value stores
+* records
+* tuples
+* list
+* union
+* pointers
+
+
+* Type systems
+** type checking
+** weak type
+** strong types
+** type equivalence
+** Static vs. dynamic typing
+* Type inference
+* Objects and classes
