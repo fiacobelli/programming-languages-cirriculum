@@ -1,0 +1,6 @@
+= Algorithms
+
+* Method for solving a problem
+* Often implemented by a program, but does not have to be
+
+https://en.wikipedia.org/wiki/Algorithm

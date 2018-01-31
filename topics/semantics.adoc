@@ -1,0 +1,22 @@
+= Semantics
+
+* describes relationship between a program and its model of computation
+* Attribute grammars
+* Static semantics
+* Dynamic semantics
+* operational semantics
+* denotational semantics
+** state
+** expressions
+** assignments
+* Axoimatic semantics
+** Assertions
+** weak pre-conditions
+*** assignments
+*** sequences
+*** selection
+*** while loops
+
+== Sources
+* http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
+* concepts of programming languages - sebesta

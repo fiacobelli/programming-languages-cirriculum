@@ -1,26 +1,43 @@
+:toc: left
+
 = Part 1 - Concepts
 
-== Outline
+include::topics/what-is-a-programming-language.adoc[leveloffset=+1]
 
-. What is a programming language?
-.. Programming language Definition
-.. Formal Language
-.. computational model
-... instructions
-... operations
-... computation
-... output
-... input
-.. algorithms
-.. programs
-.. syntax
-.. semantics
-.. abstraction
-.. generalization
+include::topics/what-is-a-formal-language.adoc[leveloffset=+1]
+
+include::topics/what-is-a-programming-language.adoc[leveloffset=+1]
+
+include::topics/computational-model.adoc[leveloffset=+1]
+
+include::topics/programs.adoc[leveloffset=+1]
+
+include::topics/algorithms.adoc[leveloffset=+1]
+
+include::topics/syntax.adoc[leveloffset=+1]
+
+include::topics/semantics.adoc[leveloffset=+1]
+
+include::topics/name-binding-scope.adoc[leveloffset=+1]
 
 
-include::topics/what-is-a-programming-language.adoc[leveloffset+=1]
 
-include::topics/what-is-a-formal-language.adoc[leveloffset+=1]
 
-include::topics/computational-model.adoc[leveloffset+=1]
+* datatypes
+* Statements and control structures
+* subprogramming
+* structured, functional langs (functions as first class citzens), oo langs, imperative langs, blended
+Overview of Programming Languages
+
+
+Data Types
+Expressions
+Subprograms
+Object Oriented Programming
+Functional programming Languages
+Logic programming Languages
+
+
+
+. abstraction
+. generalization

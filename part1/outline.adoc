@@ -1,40 +1,4 @@
 
-
-evaluation
-math
-
-
-
-
-
-== What is not a programming language
-HTML problem
-Markup Languages
-hybrid languages
-DSL
-
-
-
-## Part1 - Concepts
-* Syntax
-* naming/Binding
-* scope
-* datatypes
-* Statements and control structures
-* subprogramming
-* structured, functional langs (functions as first class citzens), oo langs, imperative langs, blended
-Overview of Programming Languages
-Syntax and Semantics
-Variables and bindings
-Data Types
-Expressions
-Subprograms
-Object Oriented Programming
-Functional programming Languages
-Logic programming Languages
-
-
-
 We can use pen and paper for this to illustrate concepts
 
 
@@ -74,12 +38,5 @@ We can use pen and paper for this to illustrate concepts
 ### Names, Binding and scope
 
 ### Data Types
-
-
-
-### Statements
-* expressions
-* assignments
-* control structures
 
 ### Subprograms

@@ -1,0 +1,19 @@
+= Naming, Binding, and Scope
+
+* name forms
+** problems with naming, what is allowed?
+** collisions with reserved words
+* Variables
+** address
+* type and value
+* binding
+** static
+** dynamic
+** static and dynamic variables
+* scope
+** blocks
+** importance of order
+** globals
+** evaluation of scoping
+** dynamic Scope
+* Constants

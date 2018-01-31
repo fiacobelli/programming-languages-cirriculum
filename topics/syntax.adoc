@@ -1,0 +1,25 @@
+= Syntax
+
+* Structure of a programming language
+* Sentences
+* lexemes
+* numeric literals
+* operations
+* special or reserved words
+
+* names of vars
+* methods
+* classes
+* names/tokens
+
+* recognizers
+* generators
+* grammars
+* context-free grammars
+* lhs/rhs
+* symbols/non-terminals
+* terminals
+
+== Sources
+* http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
+* concepts of programming languages - sebesta
