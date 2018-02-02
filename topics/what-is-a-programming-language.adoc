@@ -1,13 +1,6 @@
 = What is a programming language
-Defintion:
-
-A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer. Programming languages can be used to create programs that implement specific algorithms.
-
-https://en.wikipedia.org/wiki/Programming_language
-
+A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer. Programming languages can be used to create programs that implement specific algorithms. xref:sources[1]
 
 A programming language is a notation for writing programs, which are specifications of a computation or algorithm.
 
-A complete description of a programming language includes the computational model, the syntax and semantics of programs, and the pragmatic considerations that shape the language.
-
-http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
+A complete description of a programming language includes the computational model, the syntax and semantics of programs, and the pragmatic considerations that shape the language. xref:sources[5]

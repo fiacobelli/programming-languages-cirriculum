@@ -2,7 +2,3 @@
 
 * Programs specify a computation
 * A programming language is the notation for writing a program
-
-== Sources
-* http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
-* concepts of programming languages - sebesta

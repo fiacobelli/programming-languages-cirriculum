@@ -19,7 +19,3 @@
 * lhs/rhs
 * symbols/non-terminals
 * terminals
-
-== Sources
-* http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
-* concepts of programming languages - sebesta

@@ -1,0 +1,9 @@
+[#sources]
+= Sources
+
+. https://en.wikipedia.org/wiki/Programming_language
+. https://en.wikipedia.org/wiki/Formal_language
+. https://en.wikipedia.org/wiki/Algorithm
+. concepts of programming languages - sebesta
+. http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
+. https://en.wikipedia.org/wiki/Markup_language

@@ -1,7 +1,22 @@
 = What is not a programming language
-HTML problem
-Markup Languages
-hybrid languages
-DSL
-evaluation
-math
+
+== Defining the problem
+
+* Languages, such as HTML, Markdown, JSON, YAML, and XML are considered markup languages and _NOT_ programming languages.
+
+
+== Markup Languages
+* Markup Languages define structured data xref:sources[6], but are not programming languages.
+** Creating or annotating documents
+** Data Transport
+* Limitations of markup languages
+** Cannot be used to implement algorithms
+**
+
+
+== Hybrid Languages
+
+* Hybrid languages combine concepts of markup languages with a subset of programming language functionality
+** iteration
+** if statements
+* Examples: JSP, XSLT, LaTeX, Asciidoc
