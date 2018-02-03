@@ -7,3 +7,4 @@
 . concepts of programming languages - sebesta
 . http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
 . https://en.wikipedia.org/wiki/Markup_language
+. https://en.wikipedia.org/wiki/Computer

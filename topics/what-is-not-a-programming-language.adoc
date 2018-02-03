@@ -11,12 +11,33 @@
 ** Data Transport
 * Limitations of markup languages
 ** Cannot be used to implement algorithms
-**
+
+=== Right Tool, Right Job
+* Markup languages are intentionally restrictive to allow a focus on the purpose
+* They are not ways to solve general programming problems
+* They focus on a specific task
+
+=== Example Uses
+
+* HTML focuses on displaying structured text
+* Markdown focuses on a way to create structured, but in a more simplified way
+** It provides a _subset_ of the capabilities of HTML, with the focus on writing prose
+* JSON and XML focus on providing machine-readable structured data
+** Works very well for data storage and transport
+** Think RESTful and Web services
+* YAML focuses on providing machine readable structured data, but is frequently used for configuration files
 
 
 == Hybrid Languages
 
-* Hybrid languages combine concepts of markup languages with a subset of programming language functionality
+* Hybrid languages combine concepts of markup languages with a subset of programming language functionality xref:sources[5].
 ** iteration
 ** if statements
-* Examples: JSP, XSLT, LaTeX, Asciidoc
+* If you want to focus on displaying structured data, but you want a bit more functionality.
+* Examples: JSP, XSLT, Asciidoc
+
+=== Example Uses
+* JSP provides the ability to write html, with the ability to create macros and add Java directly to the page.
+** The code is executed on the server before the final HTML is sent as a response
+* XSLT focuses on data transformation
+* Asciidoc provides a superset of markdown functionality, but also gives things like if statements and property replacement.
