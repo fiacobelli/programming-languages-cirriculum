@@ -1,4 +1,4 @@
-= What is not a programming language
+= What is Not a Programming Language
 
 == Defining the problem
 
