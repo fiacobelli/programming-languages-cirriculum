@@ -1,0 +1,341 @@
+{
+  "kind": "Template",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "programmin-languages-cirriculum-template",
+    "annotations": {
+      "openshift.io/display-name": "Docs Server",
+      "description": "Docs server using Asciidoc converted to HTML and served using Apache HTTP Server",
+      "tags": "adoc,httpd",
+      "iconClass": "icon-apache",
+      "template.openshift.io/long-description": "This template defines ....",
+      "template.openshift.io/provider-display-name": "http://github.com/rhoads-zach",
+      "template.openshift.io/documentation-url": "https://github.com/simple-adoc-docs/simple-adoc-docs-template",
+      "template.openshift.io/support-url": "https://github.com/simple-adoc-docs/simple-adoc-docs-template"
+    }
+  },
+  "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/openshift/httpd-ex/blob/master/README.md.",
+  "labels": {
+    "template": "programmin-languages-cirriculum-template"
+  },
+  "objects": [
+    {
+      "kind": "ImageStream",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "asciidoc-builder",
+        "annotations": {
+          "openshift.io/display-name": "Asciidoc Builder"
+        }
+      },
+      "spec": {
+        "tags": [
+          {
+            "name": "latest",
+            "annotations": {
+              "openshift.io/display-name": "Asciidoc Builder (Latest)",
+              "description": "This is an S2I builder image that takes Asciidoc files from a source repository, converts them into HTML using Asciidoctor and serves them up using a simple HTTP server.",
+              "iconClass": "icon-asciidoc",
+              "tags": "builder,asciidoc",
+              "supports": "asciidoc-builder:1.0,asciidoc-builder",
+              "sampleRepo": "https://github.com/quintesse/s2i-asciidoc.git",
+              "sampleRef": "1.1"
+            },
+            "from": {
+              "kind": "ImageStreamTag",
+              "name": "1.1"
+            }
+          },
+          {
+            "name": "1.1",
+            "annotations": {
+              "openshift.io/display-name": "Asciidoc Builder 1.1",
+              "description": "Build and serve Asciidoc files. For more information about using this builder image, including OpenShift considerations, see https://github.com/quintesse/s2i-asciidoc/blob/master/README.md",
+              "iconClass": "icon-asciidoc",
+              "tags": "builder,asciidoc-builder",
+              "supports": "asciidoc-builder:1.1,asciidoc-builder",
+              "version": "1.1",
+              "sampleRepo": "https://github.com/quintesse/s2i-asciidoc.git",
+              "sampleRef": "1.1"
+            },
+            "from": {
+              "kind": "DockerImage",
+              "name": "quintesse/s2i-asciidoc:1.1"
+            }
+          },
+          {
+            "name": "1.0",
+            "annotations": {
+              "openshift.io/display-name": "Asciidoc Builder 1.0",
+              "description": "Build and serve Asciidoc files. For more information about using this builder image, including OpenShift considerations, see https://github.com/quintesse/s2i-asciidoc/blob/master/README.md",
+              "iconClass": "icon-asciidoc",
+              "tags": "builder,asciidoc-builder",
+              "supports": "asciidoc-builder:1.0,asciidoc-builder",
+              "version": "1.0",
+              "sampleRepo": "https://github.com/quintesse/s2i-asciidoc.git",
+              "sampleRef": "1.0"
+            },
+            "from": {
+              "kind": "DockerImage",
+              "name": "quintesse/s2i-asciidoc:1.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${NAME}",
+        "annotations": {
+          "description": "Exposes and load balances the application pods"
+        }
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "web",
+            "port": 8080,
+            "targetPort": 8080
+          }
+        ],
+        "selector": {
+          "name": "${NAME}"
+        }
+      }
+    },
+    {
+      "kind": "Route",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${NAME}",
+        "annotations": {
+          "template.openshift.io/expose-uri": "http://{.spec.host}{.spec.path}"
+        }
+      },
+      "spec": {
+        "host": "${APPLICATION_DOMAIN}",
+        "to": {
+          "kind": "Service",
+          "name": "${NAME}"
+        }
+      }
+    },
+    {
+      "kind": "ImageStream",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${NAME}",
+        "annotations": {
+          "description": "Keeps track of changes in the application image"
+        }
+      }
+    },
+    {
+      "kind": "BuildConfig",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${NAME}",
+        "annotations": {
+          "description": "Defines how to build the application",
+          "template.alpha.openshift.io/wait-for-ready": "true"
+        }
+      },
+      "spec": {
+        "source": {
+          "type": "Git",
+          "git": {
+            "uri": "${SOURCE_REPOSITORY_URL}",
+            "ref": "${SOURCE_REPOSITORY_REF}"
+          }
+        },
+        "strategy": {
+          "type": "Source",
+          "sourceStrategy": {
+            "from": {
+              "kind": "ImageStreamTag",
+              "name": "asciidoc-builder:latest"
+            }
+          }
+        },
+        "output": {
+          "to": {
+            "kind": "ImageStreamTag",
+            "name": "${NAME}:latest"
+          }
+        },
+        "triggers": [
+          {
+            "type": "ImageChange"
+          },
+          {
+            "type": "ConfigChange"
+          },
+          {
+            "type": "GitHub",
+            "github": {
+              "secret": "${GITHUB_WEBHOOK_SECRET}"
+            }
+          },
+          {
+            "type": "Generic",
+            "generic": {
+              "secret": "${GENERIC_WEBHOOK_SECRET}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "DeploymentConfig",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "${NAME}",
+        "annotations": {
+          "description": "Defines how to deploy the application server",
+          "template.alpha.openshift.io/wait-for-ready": "true"
+        }
+      },
+      "spec": {
+        "strategy": {
+          "type": "Rolling"
+        },
+        "triggers": [
+          {
+            "type": "ImageChange",
+            "imageChangeParams": {
+              "automatic": true,
+              "containerNames": [
+                "programmin-languages-cirriculum-template"
+              ],
+              "from": {
+                "kind": "ImageStreamTag",
+                "name": "${NAME}:latest"
+              }
+            }
+          },
+          {
+            "type": "ConfigChange"
+          }
+        ],
+        "replicas": 1,
+        "selector": {
+          "name": "${NAME}"
+        },
+        "template": {
+          "metadata": {
+            "name": "${NAME}",
+            "labels": {
+              "name": "${NAME}"
+            }
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "programmin-languages-cirriculum-template",
+                "image": " ",
+                "ports": [
+                  {
+                    "containerPort": 8080
+                  }
+                ],
+                "readinessProbe": {
+                  "timeoutSeconds": 3,
+                  "initialDelaySeconds": 3,
+                  "httpGet": {
+                    "path": "/",
+                    "port": 8080
+                  }
+                },
+                "livenessProbe": {
+                    "timeoutSeconds": 3,
+                    "initialDelaySeconds": 30,
+                    "httpGet": {
+                        "path": "/",
+                        "port": 8080
+                    }
+                },
+                "resources": {
+                    "limits": {
+                        "memory": "${MEMORY_LIMIT}"
+                    }
+                },
+                "env": [
+                ],
+                "resources": {
+                  "limits": {
+                    "memory": "${MEMORY_LIMIT}"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "name": "NAME",
+      "displayName": "Name",
+      "description": "The name assigned to all of the frontend objects defined in this template.",
+      "required": true,
+      "value": "programmin-languages-cirriculum-template"
+    },
+    {
+      "name": "NAMESPACE",
+      "displayName": "Namespace",
+      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "required": true,
+      "value": "openshift"
+    },
+    {
+      "name": "MEMORY_LIMIT",
+      "displayName": "Memory Limit",
+      "description": "Maximum amount of memory the container can use.",
+      "required": true,
+      "value": "512Mi"
+    },
+    {
+      "name": "SOURCE_REPOSITORY_URL",
+      "displayName": "Git Repository URL",
+      "description": "The URL of the repository with your application source code.",
+      "required": true,
+      "value": "https://github.com/rhoads-zach/programming-languages-cirriculum.git"
+    },
+    {
+      "name": "SOURCE_REPOSITORY_REF",
+      "displayName": "Git Reference",
+      "description": "Set this to a branch name, tag or other ref of your repository if you are not using the default branch.",
+      "value": "master"
+    },
+    {
+      "name": "CONTEXT_DIR",
+      "displayName": "Context Directory",
+      "description": "Set this to the relative path to your project if it is not in the root of your repository.",
+      "required": false,
+      "value": "html/"
+    },
+    {
+      "name": "APPLICATION_DOMAIN",
+      "displayName": "Application Hostname",
+      "description": "The exposed hostname that will route to the httpd service, if left blank a value will be defaulted.",
+      "value": ""
+    },
+    {
+      "name": "GITHUB_WEBHOOK_SECRET",
+      "displayName": "GitHub Webhook Secret",
+      "description": "Github trigger secret.  A difficult to guess string encoded as part of the webhook URL.  Not encrypted.",
+      "generate": "expression",
+      "from": "[a-zA-Z0-9]{40}"
+    },
+    {
+      "name": "GENERIC_WEBHOOK_SECRET",
+      "displayName": "Generic Webhook Secret",
+      "description": "A secret string used to configure the Generic webhook.",
+      "generate": "expression",
+      "from": "[a-zA-Z0-9]{40}"
+    }
+  ]
+}
