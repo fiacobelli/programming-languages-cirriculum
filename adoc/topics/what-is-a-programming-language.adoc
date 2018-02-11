@@ -40,52 +40,81 @@ A programming language is a way to tell some form of a computer how to do work w
 
 Examples of languages:
 
-.Assembly
-[source,assembly]
+.link:https://github.com/leachim6/hello-world/blob/master/a/assembler_nasm_linux.asm[Example Assembly]
+[source]
 ----
-something
+section	.text
+    global _start			;must be declared for linker (ld)
+
+_start:					;tell linker entry point
+
+	xor	ebx,ebx 	;ebx=0
+	mov	ecx,msg		;address of message to write
+	lea	edx,[ebx+len]	;message length
+	lea	eax,[ebx+4]	;system call number (sys_write)
+	inc	ebx		;file descriptor (stdout)
+	int	0x80		;call kernel
+
+	xor	eax, eax	;set eax=0
+	inc	eax		;system call number (sys_exit)
+	int	0x80		;call kernel
+
+section	.rodata
+
+msg	db	'Hello, world!',0xa	;our string
+len	equ	$ - msg			;length of our string
 ----
 
-.C
+.link:https://github.com/leachim6/hello-world/blob/master/c/c.c[Example C]
 [source,c]
 ----
-something
+#include <stdio.h>
+
+int main() {
+	printf("Hello World\n");
+	return 0;
+}
 ----
 
-.Java
+.link:https://github.com/leachim6/hello-world/blob/master/j/Java.java[Example Java]
 [source,java]
 ----
-something
+public class Java {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
 ----
 
-.Python
+.link:https://github.com/leachim6/hello-world/blob/master/p/python.py[Example Python]
 [source,python]
 ----
-something
+#!/usr/bin/env python
+print "Hello World"
 ----
 
-.Ruby
+.link:https://github.com/leachim6/hello-world/blob/master/r/ruby.rb[Example Ruby]
 [source,ruby]
 ----
-something
+#!/usr/bin/env ruby
+puts "Hello World"
 ----
 
-.Lisp
-[source,lisp]
+.link:https://github.com/leachim6/hello-world/blob/master/l/lisp.lsp[Example Lisp]
+[source]
 ----
-something
+; LISP
+(DEFUN hello ()
+  (PRINT (LIST 'HELLO 'WORLD))
+)
+
+(hello)
 ----
 
-.Swift
-[source,swift]
-----
-something
-----
-
-.Javascript
+.link:https://github.com/leachim6/hello-world/blob/master/j/javascript.js[Example JavaScript]
 [source,javascript]
 ----
-something
+console.log("Hello World");
 ----
 
-And link:https://en.wikipedia.org/wiki/List_of_programming_languages[a lot more].
+And link:https://en.wikipedia.org/wiki/List_of_programming_languages[a lot more languages] and link:https://github.com/leachim6/hello-world[examples].
