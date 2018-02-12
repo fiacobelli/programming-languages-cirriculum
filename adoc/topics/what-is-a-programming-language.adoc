@@ -38,9 +38,9 @@ Pragmatic Considerations:: How well the programming language accomplishes its go
 == Simple Explanation
 A programming language is a way to tell some form of a computer how to do work which involves algorithms, math, logic, and other instructions.
 
-Examples of languages:
+== Examples of Languages
 
-.link:https://github.com/leachim6/hello-world/blob/master/a/assembler_nasm_linux.asm[Example Assembly]
+.link:https://github.com/leachim6/hello-world/blob/master/a/assembler_nasm_linux.asm[Example Assembly^]
 [source]
 ----
 section	.text
@@ -65,7 +65,7 @@ msg	db	'Hello, world!',0xa	;our string
 len	equ	$ - msg			;length of our string
 ----
 
-.link:https://github.com/leachim6/hello-world/blob/master/c/c.c[Example C]
+.link:https://github.com/leachim6/hello-world/blob/master/c/c.c[Example C^]
 [source,c]
 ----
 #include <stdio.h>
@@ -76,7 +76,7 @@ int main() {
 }
 ----
 
-.link:https://github.com/leachim6/hello-world/blob/master/j/Java.java[Example Java]
+.link:https://github.com/leachim6/hello-world/blob/master/j/Java.java[Example Java^]
 [source,java]
 ----
 public class Java {
@@ -86,21 +86,21 @@ public class Java {
 }
 ----
 
-.link:https://github.com/leachim6/hello-world/blob/master/p/python.py[Example Python]
+.link:https://github.com/leachim6/hello-world/blob/master/p/python.py[Example Python^]
 [source,python]
 ----
 #!/usr/bin/env python
 print "Hello World"
 ----
 
-.link:https://github.com/leachim6/hello-world/blob/master/r/ruby.rb[Example Ruby]
+.link:https://github.com/leachim6/hello-world/blob/master/r/ruby.rb[Example Ruby^]
 [source,ruby]
 ----
 #!/usr/bin/env ruby
 puts "Hello World"
 ----
 
-.link:https://github.com/leachim6/hello-world/blob/master/l/lisp.lsp[Example Lisp]
+.link:https://github.com/leachim6/hello-world/blob/master/l/lisp.lsp[Example Lisp^]
 [source]
 ----
 ; LISP
@@ -111,10 +111,10 @@ puts "Hello World"
 (hello)
 ----
 
-.link:https://github.com/leachim6/hello-world/blob/master/j/javascript.js[Example JavaScript]
+.link:https://github.com/leachim6/hello-world/blob/master/j/javascript.js[Example JavaScript^]
 [source,javascript]
 ----
 console.log("Hello World");
 ----
 
-And link:https://en.wikipedia.org/wiki/List_of_programming_languages[a lot more languages] and link:https://github.com/leachim6/hello-world[examples].
+And link:https://en.wikipedia.org/wiki/List_of_programming_languages[a lot more languages^] and link:https://github.com/leachim6/hello-world[examples^].

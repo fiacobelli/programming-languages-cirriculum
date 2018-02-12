@@ -1,16 +1,20 @@
 = What is Not a Programming Language
 
-== Defining the problem
+== Defining the Problem
+There exist languages that allow you to do some limited set of work, but are not programming languages.
 
-* Languages, such as HTML, Markdown, JSON, YAML, and XML are considered markup languages and _NOT_ programming languages.
+For example, languages, such as HTML, Markdown, JSON, YAML, and XML are considered markup languages and _NOT_ programming languages.
 
 
 == Markup Languages
-* Markup Languages define structured data xref:sources[6], but are not programming languages.
-** Creating or annotating documents
-** Data Transport
-* Limitations of markup languages
-** Cannot be used to implement algorithms
+Markup Languages define structured data xref:sources[6], but are not programming languages.
+
+Markup languages are purpose built to:
+
+* Create or annotate documents
+* Enable Data Transport
+
+Markup languages cannot be used to implement algorithms.
 
 === Right Tool, Right Job
 * Markup languages are intentionally restrictive to allow a focus on the purpose
@@ -19,14 +23,59 @@
 
 === Example Uses
 
+.HTML
 * HTML focuses on displaying structured text
-* Markdown focuses on a way to create structured, but in a more simplified way
-** It provides a _subset_ of the capabilities of HTML, with the focus on writing prose
+
+.Example HTML
+[source,html]
+----
+<html>
+  <head></head>
+  <body>
+    <h1>Hello, World!</h1>
+  </body>
+</html>
+----
+
+.Markdown
+* Markdown focuses on a way to create structured, but in a more simplified way.
+* It provides a _subset_ of the capabilities of HTML, with the focus on writing prose
+
+.Example Markdown
+[source,markdown]
+----
+= Hello, World!
+----
+
+.JSON and XML
 * JSON and XML focus on providing machine-readable structured data
-** Works very well for data storage and transport
-** Think RESTful and Web services
+* Works very well for data storage and transport
+* Think RESTful and Web services
+
+.Example JSON
+[source,json]
+----
+{
+  "greeting" : "Hello, World!"
+}
+----
+
+.Example XML
+[source,xml]
+----
+<xml>
+  <greeting>Hello, World!</greeting>
+</xml>
+----
+
+.YAML
 * YAML focuses on providing machine readable structured data, but is frequently used for configuration files
 
+.Example YAML
+[source,yaml]
+----
+greeting: Hello, World!
+----
 
 == Hybrid Languages
 
