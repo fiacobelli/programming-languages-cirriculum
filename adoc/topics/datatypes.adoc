@@ -5,6 +5,7 @@ Definition: collection of values and operations you can perform on those values
 Why do we care about types?
 
 Breakdown of types:
+
 * numberic
 ** int
 ** floating point
