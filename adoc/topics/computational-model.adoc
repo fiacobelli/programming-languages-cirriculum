@@ -26,8 +26,8 @@ What could the computational model look like?
 
 === Option 1
 
-Values:: Integers
-Operations:: `INT + INT`,`INT - INT`,`INT * INT`,`INT / INT`
+Values:: Integers (INT)
+Operations:: `INT + INT` , `INT - INT` , `INT * INT` , `INT / INT`
 
 .Example Usage
 [source]
@@ -40,22 +40,22 @@ Operations:: `INT + INT`,`INT - INT`,`INT * INT`,`INT / INT`
 
 === Option 2
 
-Values:: Integers, Natural
-Operations:: `INT + INT`,`INT - INT`, `Repeat[INT + INT , NAT]`, `CountRepeatsUntilZero[INT - INT]`
+Values:: Integers (INT), Natural Numbers (NAT)
+Operations:: `INT + INT` , `INT - INT` , `Repeat[INT + INT|NAT]` , `CountRepeatsUntilZero[INT - INT]`
 
 .Example Usage
 [source]
 ----
 1 + 0
 5 - 3
-Repeat[6 + 6 , 4]
+Repeat[6 + 6|4]
 CountRepeatsUntilZero[8 - 2]
 ----
 
 == Exercises
 . What is another computational model for the above example?
-. What would 2 computational models be for doing squaring (e.g 5^2)?
-. What would 2 computational models be for doing general exponents (e.g. 3^5)?
+. What would 2 computational models be for doing squaring (e.g 5^2^)?
+. What would 2 computational models be for doing general exponents (e.g. 3^4^)?
 
 
 
