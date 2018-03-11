@@ -1,6 +1,55 @@
 = Algorithms
 
+https://en.wikipedia.org/wiki/Algorithm
+
 * Method for solving a problem
 * Often implemented by a program, but does not have to be
+* An algorithm can be defined at a high-level, absent of a programming language
+** This is sometimes called pseudocode
 
-https://en.wikipedia.org/wiki/Algorithm
+== Example Algorithms
+
+* link:https://en.wikipedia.org/wiki/Factorial[Factorial]
+* link:https://en.wikipedia.org/wiki/Bubble_sort[Bubble sort]
+* link:https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm[KMP search]
+
+=== Factorial
+https://en.wikipedia.org/wiki/Factorial
+
+The factorial of `n` is the product of all positive integers from 1 to `n`. `!` is used to denote factorial.
+
+.Example
+[source]
+----
+0! = 1
+1! = 1
+2! = 2*1 = 2
+3! = 3*2*1 = 6
+4! = 4*3*2*1= 24
+5! = 5*4*3*2*1 = 120
+...
+n! = n(n-1)(n-2)....(3)(2)(1)
+----
+
+.Example Algorithm in Psudedocode
+[source]
+----
+integer factorial(n)
+{
+  if n is less than 1
+    return 1
+  else
+    int factOfN = 1
+
+    for each int i from n to 1
+      factOfN = factOfN * i
+
+    return factOfN
+}
+----
+
+
+== Exercises
+. Give an example algorithm for link:https://en.wikipedia.org/wiki/Summation[Summation]
+. Give an example algorithm for link:https://en.wikipedia.org/wiki/Bubble_sort[Bubble sort]
+. Give an example algorithm for link:https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm[KMP search]

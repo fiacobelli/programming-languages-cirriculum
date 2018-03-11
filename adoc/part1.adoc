@@ -8,8 +8,6 @@ include::topics/what-is-not-a-programming-language.adoc[leveloffset=+1]
 
 include::topics/computational-model.adoc[leveloffset=+1]
 
-include::topics/programs.adoc[leveloffset=+1]
-
 include::topics/algorithms.adoc[leveloffset=+1]
 
 include::topics/syntax.adoc[leveloffset=+1]
