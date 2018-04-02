@@ -1,1 +1,74 @@
-= Part2 - Basics in action
+= Part2 - Basics in Action
+
+== Declarative/imperative Languages
+
+=== Assignments and flow Control
+* variable definition and evaluation
+* looping
+* iteration
+* if/then/case
+* exceptions
+
+=== Typing
+* primitives and first-class citizens
+** how are strings handled?
+** mutability vs. immutability
+* operators
+* enums
+* structs
+* classes/objects
+** pointers
+** compare to primitives
+* evaluating and comparing
+** precision
+** integer divide
+** `=` vs. `==`
+* static and dynamic
+* strong and weak
+
+=== Functions
+* definition
+* return values
+** returning multiple values
+* call by value v.s. call by reference
+* scoping with functions
+
+
+=== interpreted and compiled
+* pros and cons of each
+* error handling in each
+* Troubleshooting and coding
+** When will syntax issues show up?
+** When can you catch evaluation issues?
+** How do you debug programs?
+** compile time issues vs. runtime issues
+
+
+== Functional Languages
+
+=== Lambdas
+* Lambda calculus
+* Lambda functions
+** examples in different languages
+
+=== Blocks
+* Difference between lambdas and blocks
+** Examples in different languages
+
+=== passing functions
+* Passing functions into functions
+** by Names
+** as blocks
+** as callbacks
+
+=== Pros and cons
+* where do functional languages shine?
+* where do that struggle?
+* functional language concepts in declarative languages
+
+== Object Oriented Languages
+* Inheritance
+* Polymorphism
+* Generics
+* The diamond problem
+* Comparators

@@ -50,6 +50,7 @@
 == Materials
 
 * link:syllabus.html[Syllabus]
+* link:https://www.pearson.com/us/higher-education/program/Sebesta-Concepts-of-Programming-Languages-11th-Edition/PGM270801.html[Concepts of Programming Languages, 11th Edition - Robert W. Sebesta]
 * Lecture Outlines
 ** link:part1.html[Part 1 - Theory]
 ** link:part2.html[Part 2 - Basics in Action]

@@ -1,1 +1,29 @@
-= Part3 - Lets solve some problems!
+= Part3 - Problem Solving
+
+== CRUD
+* connecting to the database
+* connection pools
+* mapping language types to database types
+* persistence frameworks
+
+=== Transactions
+* What are they?
+* rollback
+
+
+== Concurrency
+* What is it?
+* Parallelization
+* non-blocking operations
+
+== Events
+* Event loops
+* Responding to events
+** Reactive programming
+
+== Distributed Systems and Microservices
+
+
+== Message Passing and Message Queues
+* Asynchronous Programming
+* Message Queues
