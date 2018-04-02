@@ -1,0 +1,56 @@
+= Programming Languages Curriculum
+
+== Course Goals
+* Learn the base concepts in core to programming language design.
+* Understand how to implement or use those base concepts in various languages.
+* Using concepts in programming languages to solve practical problems.
+
+== Outcomes
+* Have working knowledge of programming language topics.
+* Understand how different choices in programming language design impact problem solving in that language.
+* Gain exposure to modern software development problems.
+* Ability to make informed decisions when choosing a language to solve a problem.
+
+== Outline of Topics
+
+. Part1 - Concepts
+** What is and is not a programming language.
+** Computational Models
+** Algorithms
+** Syntax and Semantics
+** Naming, Binding and Scope
+** Datatypes
+** Expressions and Assignments
+** Control structures
+** Subprograms
+** Abstraction and Encapsulation
+** Approaches in Languages
+. Part2 - Basics in action
+** Declarative/imperative Languages
+*** Assignments and flow Control
+*** Typing
+*** Functions
+*** interpreted and compiled
+** Functional Languages
+*** lambdas
+*** Blocks
+*** passing functions
+** Object Oriented Languages
+*** Inheritance
+*** Polymorphism
+. Part3 - Lets solve some problems!
+** CRUD
+** Concurrency
+** Events
+** Distributed systems and Microservices
+** message passing
+** Message queues
+** transactions
+
+== Materials
+
+* link:syllabus.html[Syllabus]
+* Lecture Outlines
+** link:part1.html[Part 1 - Theory]
+** link:part2.html[Part 2 - Basics in Action]
+** link:part3.html[Part 3 - Problem Solving]
