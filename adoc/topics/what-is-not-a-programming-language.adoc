@@ -7,7 +7,7 @@ For example, languages, such as HTML, Markdown, JSON, YAML, and XML are consider
 
 
 == Markup Languages
-Markup Languages define structured data xref:sources[6], but are not programming languages.
+Markup Languages define structured data link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[6], but are not programming languages.
 
 Markup languages are purpose built to:
 
@@ -79,7 +79,7 @@ greeting: Hello, World!
 
 == Hybrid Languages
 
-* Hybrid languages combine concepts of markup languages with a subset of programming language functionality xref:sources[5].
+* Hybrid languages combine concepts of markup languages with a subset of programming language functionality link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[5].
 ** iteration
 ** if statements
 * If you want to focus on displaying structured data, but you want a bit more functionality.

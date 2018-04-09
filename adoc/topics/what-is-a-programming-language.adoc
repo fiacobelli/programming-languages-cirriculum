@@ -3,7 +3,7 @@
 == Definition 1
 * A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output.
 * Programming languages generally consist of instructions for a computer.
-* Programming languages can be used to create programs that implement specific algorithms. xref:sources[1]
+* Programming languages can be used to create programs that implement specific algorithms. link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[^1^]
 
 === Definition 1 - Terms
 * _Formal Language_ : Set of strings of symbols together with a set of rules that are specific to it.
@@ -11,25 +11,22 @@
 * _Computer_ : A device that takes a sequence of math or logic operations and perform them.
 
 == Definition 2
-A programming language is a notation for writing programs.
+* A programming language is a notation for writing programs.
 
-Programs:: Specifications of a computation or algorithm.
-
-Algorithm:: Unambiguous way to solve a problem.
-
-Computation:: A calculation, involving mathematical and/or non-mathematical steps and a well-defined model. For example, an algorithm.
+.Terms
+* _Programs_: Specifications of a computation or algorithm.
+* _Algorithm_: Unambiguous way to solve a problem.
+* _Computation_: A calculation, involving mathematical and/or non-mathematical steps and a well-defined model. For example, an algorithm.
 
 
 == Definition 3
-A complete description of a programming language includes the computational model, the syntax and semantics of programs, and the pragmatic considerations that shape the language. xref:sources[5]
+* A complete description of a programming language includes the computational model, the syntax and semantics of programs, and the pragmatic considerations that shape the language. link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[^5^]
 
-Computational Model:: A set of value and operations allowed in the language.
-
-Syntax:: Structure and form of the language. (Notation)
-
-Semantics:: The relationship between the syntax and the computational model.
-
-Pragmatic Considerations:: How well the programming language accomplishes its goal.
+.Terms
+* _Computational Model_: A set of value and operations allowed in the language.
+* _Syntax_: Structure and form of the language. (Notation)
+* _Semantics_: The relationship between the syntax and the computational model.
+* _Pragmatic Considerations_: How well the programming language accomplishes its goal.
 
 
 == Simple Explanation
@@ -37,6 +34,7 @@ A programming language is a way to tell some form of a computer how to do work w
 
 == Examples of Languages
 
+=== Assembly
 .link:https://github.com/leachim6/hello-world/blob/master/a/assembler_nasm_linux.asm[Example Assembly^]
 [source]
 ----
@@ -62,6 +60,7 @@ msg	db	'Hello, world!',0xa	;our string
 len	equ	$ - msg			;length of our string
 ----
 
+=== C
 .link:https://github.com/leachim6/hello-world/blob/master/c/c.c[Example C^]
 [source,c]
 ----
@@ -73,6 +72,7 @@ int main() {
 }
 ----
 
+=== Java
 .link:https://github.com/leachim6/hello-world/blob/master/j/Java.java[Example Java^]
 [source,java]
 ----
@@ -83,6 +83,7 @@ public class Java {
 }
 ----
 
+=== Python
 .link:https://github.com/leachim6/hello-world/blob/master/p/python.py[Example Python^]
 [source,python]
 ----
@@ -90,6 +91,7 @@ public class Java {
 print "Hello World"
 ----
 
+=== Ruby
 .link:https://github.com/leachim6/hello-world/blob/master/r/ruby.rb[Example Ruby^]
 [source,ruby]
 ----
@@ -97,6 +99,7 @@ print "Hello World"
 puts "Hello World"
 ----
 
+=== Lisp
 .link:https://github.com/leachim6/hello-world/blob/master/l/lisp.lsp[Example Lisp^]
 [source]
 ----
@@ -108,10 +111,12 @@ puts "Hello World"
 (hello)
 ----
 
+=== JavaScript
 .link:https://github.com/leachim6/hello-world/blob/master/j/javascript.js[Example JavaScript^]
 [source,javascript]
 ----
 console.log("Hello World");
 ----
 
+=== More
 And link:https://en.wikipedia.org/wiki/List_of_programming_languages[a lot more languages^] and link:https://github.com/leachim6/hello-world[examples^].

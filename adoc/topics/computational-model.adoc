@@ -1,5 +1,7 @@
 = Computational model
 
+link:http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm[Source^]
+
 A set of values and operations allowed in the language.
 
 == Values
@@ -56,10 +58,3 @@ CountRepeatsUntilZero[8 - 2]
 . What is another computational model for the above example?
 . What would 2 computational models be for doing squaring (e.g 5^2^)?
 . What would 2 computational models be for doing general exponents (e.g. 3^4^)?
-
-
-
-
-
-
-http://www.emu.edu.tr/aelci/Courses/D-318/D-318-Files/plbook/intro.htm
