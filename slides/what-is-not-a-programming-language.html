@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>What is Not a Programming Language</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css" id="theme"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>What is Not a Programming Language</h1></section><section id="defining_the_problem"><h2>Defining the Problem</h2><div class="paragraph"><p>There exist languages that allow you to do some limited set of work, but are not programming languages.</p></div>
+<div class="paragraph"><p>For example, languages, such as HTML, Markdown, JSON, YAML, and XML are considered markup languages and <em>NOT</em> programming languages.</p></div></section>
+<section><section id="markup_languages"><h2>Markup Languages</h2><div class="paragraph"><p>Markup Languages define structured data <a href="#sources">6</a>, but are not programming languages.</p></div><div class="paragraph"><p>Markup languages are purpose built to:</p></div><div class="ulist"><ul><li><p>Create or annotate documents</p></li><li><p>Enable Data Transport</p></li></ul></div><div class="paragraph"><p>Markup languages cannot be used to implement algorithms.</p></div></section><section id="right_tool_right_job"><h2>Right Tool, Right Job</h2><div class="ulist"><ul><li><p>Markup languages are intentionally restrictive to allow a focus on the purpose</p></li><li><p>They are not ways to solve general programming problems</p></li><li><p>They focus on a specific task</p></li></ul></div></section><section id="example_uses"><h2>Example Uses</h2><div class="ulist"><div class="title">HTML</div><ul><li><p>HTML focuses on displaying structured text</p></li></ul></div>
+<div class="listingblock"><div class="title">Example HTML</div><div class="content"><pre class="highlight"><code class="html language-html">&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div>
+<div class="ulist"><div class="title">Markdown</div><ul><li><p>Markdown focuses on a way to create structured, but in a more simplified way.</p></li><li><p>It provides a <em>subset</em> of the capabilities of HTML, with the focus on writing prose</p></li></ul></div>
+<div class="listingblock"><div class="title">Example Markdown</div><div class="content"><pre class="highlight"><code class="markdown language-markdown">= Hello, World!</code></pre></div></div>
+<div class="ulist"><div class="title">JSON and XML</div><ul><li><p>JSON and XML focus on providing machine-readable structured data</p></li><li><p>Works very well for data storage and transport</p></li><li><p>Think RESTful and Web services</p></li></ul></div>
+<div class="listingblock"><div class="title">Example JSON</div><div class="content"><pre class="highlight"><code class="json language-json">{
+  "greeting" : "Hello, World!"
+}</code></pre></div></div>
+<div class="listingblock"><div class="title">Example XML</div><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;xml&gt;
+  &lt;greeting&gt;Hello, World!&lt;/greeting&gt;
+&lt;/xml&gt;</code></pre></div></div>
+<div class="ulist"><div class="title">YAML</div><ul><li><p>YAML focuses on providing machine readable structured data, but is frequently used for configuration files</p></li></ul></div>
+<div class="listingblock"><div class="title">Example YAML</div><div class="content"><pre class="highlight"><code class="yaml language-yaml">greeting: Hello, World!</code></pre></div></div></section></section>
+<section><section id="hybrid_languages"><h2>Hybrid Languages</h2><div class="ulist"><ul><li><p>Hybrid languages combine concepts of markup languages with a subset of programming language functionality <a href="#sources">5</a>.</p><div class="ulist"><ul><li><p>iteration</p></li><li><p>if statements</p></li></ul></div></li><li><p>If you want to focus on displaying structured data, but you want a bit more functionality.</p></li><li><p>Examples: JSP, XSLT, Asciidoc</p></li></ul></div></section><section id="example_uses_2"><h2>Example Uses</h2><div class="ulist"><ul><li><p>JSP provides the ability to write html, with the ability to create macros and add Java directly to the page.</p><div class="ulist"><ul><li><p>The code is executed on the server before the final HTML is sent as a response</p></li></ul></div></li><li><p>XSLT focuses on data transformation</p></li><li><p>Asciidoc provides a superset of markdown functionality, but also gives things like if statements and property replacement.</p></li></ul></div></section></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Set a per-slide timing for speaker notes, null means none
+  defaultTiming: null,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'black',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true }
+  ]
+});</script></body></html>
