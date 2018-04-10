@@ -42,3 +42,5 @@
           (Fill this in)
           => begin A = D - 5; B = B + C - A + D; end
 ----
+
+. Create parse trees for the above three derivations.
