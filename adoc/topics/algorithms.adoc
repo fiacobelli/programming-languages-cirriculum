@@ -47,9 +47,3 @@ integer factorial(n)
     return factOfN
 }
 ----
-
-
-== Exercises
-. Give an example algorithm for link:https://en.wikipedia.org/wiki/Summation[Summation]
-. Give an example algorithm for link:https://en.wikipedia.org/wiki/Bubble_sort[Bubble sort]
-. Give an example algorithm for link:https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm[KMP search]

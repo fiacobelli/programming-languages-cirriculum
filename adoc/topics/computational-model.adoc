@@ -56,5 +56,3 @@ CountRepeatsUntilZero[8 - 2]
 
 == Exercises
 . What is another computational model for the above example?
-. What would 2 computational models be for doing squaring (e.g 5^2^)?
-. What would 2 computational models be for doing general exponents (e.g. 3^4^)?

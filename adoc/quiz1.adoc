@@ -1,0 +1,22 @@
+= Quiz 1
+
+. What is a programming language?
+
+. What would 2 computational models be for doing square root?
+
+. Write an algorithm in pseudocode describing how to make change assuming you have 1's, 5's, 10's and 20's. Use the following starter code:
++
+[source]
+----
+void makeChange(int amount)
+{
+  int ones = 0;
+  int fives = 0;
+  int tens = 0;
+  int twenties = 0;
+
+  ...
+}
+----
+
+. Write an algorithm in pseudocode that generates the nth number in a Fibonacci sequence.

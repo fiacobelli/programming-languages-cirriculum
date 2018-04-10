@@ -50,27 +50,25 @@
 ** transactions
 
 == Materials
-
 * link:syllabus.html[Syllabus]
 * link:https://www.pearson.com/us/higher-education/program/Sebesta-Concepts-of-Programming-Languages-11th-Edition/PGM270801.html[Concepts of Programming Languages, 11th Edition - Robert W. Sebesta]
-* Lecture Outlines
-** link:part1.html[Part 1 - Theory]
-** link:part2.html[Part 2 - Basics in Action]
-** link:part3.html[Part 3 - Problem Solving]
 
-.Lecture Slides
-Lecture 1::
-* link:{slides-base-url}what-is-a-programming-language.html[What is a Programming Language]
-* link:{slides-base-url}what-is-not-a-programming-language.html[What is Not a Programming Language]
-* link:{slides-base-url}computational-model.html[Computational model]
+.Lecture Outlines
+* link:part1.html[Part 1 - Theory]
+* link:part2.html[Part 2 - Basics in Action]
+* link:part3.html[Part 3 - Problem Solving]
 
-Lecture 2::
-** link:{slides-base-url}algorithms.html[Algorithms]
+.Lectures, Homework, Quizzes
+* Lecture: link:{slides-base-url}what-is-a-programming-language.html[What is a Programming Language]
+* Lecture: link:{slides-base-url}what-is-not-a-programming-language.html[What is Not a Programming Language]
+* Lecture: link:{slides-base-url}computational-model.html[Computational model]
+* Lecture: link:{slides-base-url}algorithms.html[Algorithms]
+* link:homework1.html[Homework 1]
+* link:quiz1.html[Quiz 1]
+* Lecture: link:{slides-base-url}syntax.html[Syntax]
+* link:{slides-base-url}semantics.html[Semantics]
 
-Lecture 3::
-** link:{slides-base-url}syntax.html[Syntax]
 ////
-** link:{slides-base-url}semantics.html[Semantics]
 ** link:{slides-base-url}name-binding-scope.html[Naming, Binding, and Scope]
 ** link:{slides-base-url}datatypes.html[Datatypes]
 ** link:{slides-base-url}[Expressions and Assignments]
