@@ -1,12 +1,14 @@
 = Homework 1
 
-.What is and isn't a Programming Language
+== What is and isn't a Programming Language
+. Are regular expressions a programming language?
+. Are domain-specific languages programming languages?
 
-.Computational model
+== Computational model
 . What would 2 computational models be for doing squaring (e.g 5^2^)?
 . What would 2 computational models be for doing general exponents (e.g. 3^4^)?
 
-.Algorithms
+== Algorithms
 . Give an example algorithm for link:https://en.wikipedia.org/wiki/Summation[Summation]
 . Give an example algorithm for link:https://en.wikipedia.org/wiki/Bubble_sort[Bubble sort]
 . Give an example algorithm for link:https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm[KMP search]

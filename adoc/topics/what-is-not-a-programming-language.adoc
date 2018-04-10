@@ -7,23 +7,20 @@ For example, languages, such as HTML, Markdown, JSON, YAML, and XML are consider
 
 
 == Markup Languages
-Markup Languages define structured data link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[6], but are not programming languages.
-
-Markup languages are purpose built to:
-
-* Create or annotate documents
-* Enable Data Transport
-
-Markup languages cannot be used to implement algorithms.
+* Markup Languages define structured data link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[6], but are not programming languages.
+* Markup languages are purpose built to:
+** Create or annotate documents
+** Enable Data Transport
+* Markup languages cannot be used to implement algorithms.
 
 === Right Tool, Right Job
 * Markup languages are intentionally restrictive to allow a focus on the purpose
 * They are not ways to solve general programming problems
 * They focus on a specific task
 
-=== Example Uses
+== Example Uses
 
-.HTML
+=== HTML
 * HTML focuses on displaying structured text
 
 .Example HTML
@@ -37,7 +34,7 @@ Markup languages cannot be used to implement algorithms.
 </html>
 ----
 
-.Markdown
+=== Markdown
 * Markdown focuses on a way to create structured, but in a more simplified way.
 * It provides a _subset_ of the capabilities of HTML, with the focus on writing prose
 
@@ -47,12 +44,12 @@ Markup languages cannot be used to implement algorithms.
 = Hello, World!
 ----
 
-.JSON and XML
+=== JSON and XML
 * JSON and XML focus on providing machine-readable structured data
 * Works very well for data storage and transport
 * Think RESTful and Web services
 
-.Example JSON
+=== Example JSON
 [source,json]
 ----
 {
@@ -60,7 +57,7 @@ Markup languages cannot be used to implement algorithms.
 }
 ----
 
-.Example XML
+=== Example XML
 [source,xml]
 ----
 <xml>
@@ -68,7 +65,7 @@ Markup languages cannot be used to implement algorithms.
 </xml>
 ----
 
-.YAML
+=== YAML
 * YAML focuses on providing machine readable structured data, but is frequently used for configuration files
 
 .Example YAML

@@ -32,7 +32,7 @@
 == Simple Explanation
 A programming language is a way to tell some form of a computer how to do work which involves algorithms, math, logic, and other instructions.
 
-== Examples of Languages
+== Skipping Ahead - Examples of Languages
 
 === Assembly
 .link:https://github.com/leachim6/hello-world/blob/master/a/assembler_nasm_linux.asm[Example Assembly^]

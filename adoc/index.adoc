@@ -66,9 +66,10 @@
 * link:homework1.html[Homework 1]
 * link:quiz1.html[Quiz 1]
 * Lecture: link:{slides-base-url}syntax.html[Syntax]
-* link:{slides-base-url}semantics.html[Semantics]
+* link:homework2.html[Homework 2]
 
 ////
+* link:{slides-base-url}semantics.html[Semantics]
 ** link:{slides-base-url}name-binding-scope.html[Naming, Binding, and Scope]
 ** link:{slides-base-url}datatypes.html[Datatypes]
 ** link:{slides-base-url}[Expressions and Assignments]
