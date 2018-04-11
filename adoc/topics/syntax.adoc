@@ -304,3 +304,66 @@ insert diagram
 ----
 <if_stmt> -> if (<expression>) <statement> [else <statement>]
 ----
+
+
+
+== Static Semantics
+* BNF and EBNF don't work for describing all part of a language.
+* Certain typing rules are possible, but it would make the grammar cumbersome.
+** For example integers can be assigned as floats, but not vice-versa.
+* Certain things like variable declaration and usage cannot be defined.
+** For example, a variable must be declared before it can be used.
+* These things are the static semantics of a language.
+
+== Attribute Grammars
+* Describes structure and static semantics of a language.
+* Extension of a context-free grammar.
+** Context-free grammar with attributes, attribute computation functions, and predicate functions attached.
+
+=== Attributes
+* assigned to variables and can have value assigned.
+
+=== attribute computation functions
+* associated with grammar rules
+
+=== predicate functions
+* state the static semantic rules of a language.
+* assocaited with grammar rules
+
+=== Example Grammar _G_
+[source]
+----
+<assign> -> <var> = <expr>
+<expr>   -> <var> + <var>
+          | <var>
+<var>    -> A | B | C
+----
+
+=== Example Attribute Grammar Rule 1
+* Syntax rule: `<assign> -> <var> = <expr>`
+* Semantic rule: `<expr>.expected_type <- <var>.actual_type`
+
+=== Example Attribute Grammar Rule 2
+* Syntax rule: `<expr> -> <var>[2] + <var>[3]`
+* Semantic rule:
++
+[source]
+----
+<expr>.actual_type <-
+if (<var>[2].actual_type = int) and
+   (<var>[3].actual_type = int)
+then int
+else real
+end if
+----
+
+* Predicate: `<expr>.actual_type == <expr>.expected_type`
+
+=== Example Attribute Grammar Rule 3
+* Syntax rule: `<expr> -> <var>`
+* Semantic rule: `<expr>.actual_type <- <var>.actual_type`
+* Predicate: `<expr>.actual_type == <expr>.expected_type`
+
+=== Example Attribute Grammar Rule 4
+* Syntax rule: `<var> -> A | B | C`
+* Semantic rule: `<var>.actual_type <- look-up(<var>.string)`
