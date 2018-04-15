@@ -1,18 +1,80 @@
 = Semantics
+Source: Chapter 3.5 ^link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[4]^
 
+
+== Dynamic Semantics
 * describes relationship between a program and its model of computation
-* Attribute grammars
-* Static semantics
-* Dynamic semantics
-* operational semantics
-* denotational semantics
-** state
+* what does it all mean?
 ** expressions
-** assignments
-* Axoimatic semantics
-** Assertions
-** weak pre-conditions
-*** assignments
-*** sequences
-*** selection
-*** while loops
+** Statements
+** programming units
+
+== Why does it matter?
+* Users of the language need to understand what the language does.
+* insert picture of tools
+
+== Why does it matter?
+* Implementers of the language (e.g. compiler/interpreter/JVM programmers) need this to understand how their implementation should behave.
+* insert picture of screw/nail/joist hangers
+
+== operational semantics
+* describes affects on a running machine
+* how does the state of a machine change.
+** e.g. values in storage
+* Think about writing a sample program to figure out what something does.
+* natural operational semantics: understanding the final result of the executed program.
+
+== Example
+* What is the difference between `++var;` and `var++;` in Java?
+
+[source]
+----
+int x,y = 0;
+System.out.println("x: " + ++x; + "y: " + y++; );
+System.out.println("x: " + x; + "y: " + y; );
+----
+
+== How does it work?
+* Design an lower-level intermediary language to describe your language.
+* This can also involve making a reference interpreter or VM.
+
+== Example intermediary language
+
+.Example C Statement
+[source,c]
+----
+for(expr1; expr2; expr3) {...}
+----
+
+.Example meaning
+[source]
+----
+      expr1;
+loop: if expr2 == 0 goto out
+      ...
+      expr3;
+      goto loop
+out:  ...
+----
+
+== Considerations for using operational semantics
+* Less formal
+* Dependent on a lower language, which could lead to issues (e.g. circularities)
+* Not a good usecase for complete description due to complexity
+** Accounting for full machine execution and storage is difficult
+
+== denotational semantics
+* Very rigorous
+* based on recursive function theory (link:https://en.wikipedia.org/wiki/Μ-recursive_function[μ-recursive functions]).
+** Can be computed by Turning Machines
+
+== how does it work?
+* Each language entity must define:
+.. a mathematical object
+.. a function that maps the entity to the mathematical object
+
+== Axoimatic semantics
+* Based in mathematical logic.
+* Most abstract of semantic descriptions
+* Focuses on what can be proven about a program
+* Program verification

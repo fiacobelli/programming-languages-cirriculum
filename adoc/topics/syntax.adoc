@@ -1,5 +1,5 @@
 = Syntax
-Source: Chapter 3.1 - 3.3 ^link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[4]^
+Source: Chapter 3.1 - 3.4 ^link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[4]^
 
 == Structure of a programming language
 * the form of its expressions, statements, and program units
