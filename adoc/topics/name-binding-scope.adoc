@@ -1,19 +1,223 @@
 = Naming, Binding, and Scope
+Source: Chapter 5 ^link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[4]^
 
-* name forms
-** problems with naming, what is allowed?
-** collisions with reserved words
-* Variables
+== Name Forms
+* Name is a a string of characters used to identify an entity in a program.
+* start with a letter
+* followed by letters, numbers, and underscores
+* additional conventions
+** PHP: variables start with `$`
+** Perl: variables start with symbol denoting their type, e.g. `$`, `@`, `%`
+** Ruby: variables can start with `@` or `@@` to denote instance or class variables.
+
+== Should there be a max size for a name?
+* Different languages take different approaches.
+* Fortran95 : max 31
+* C99: No limit, but only first 63 chars are used
+* Java/C#: No limit
+
+== Should names be case sensitive?
+* `FOO` vs. `foo` vs. `Foo`
+* What is more readable?
++
+[source, java]
+----
+int foo = 1;
+String Foo = "abc";
+double FOO = 3.14;
+
+System.out.println("The value is: " + Foo);
+----
+
+== Special Words
+* Reserved words: words used by the language that cannot be used for names.
+** e.g. `int`, `new`, `if`, `for`, `class`
+* A keyword is a reserved word in specific contexts.
+** Fortran used this.
+
+
+== Variables
+* Abstraction for memory
+* Also encapsulates:
+** name (see name forms)
 ** address
-* type and value
-* binding
-** static
-** dynamic
-** static and dynamic variables
-* scope
-** blocks
-** importance of order
-** globals
+** type
+** value
+** lifetime
+** scope
+
+=== Address
+* memory address the variable is associated with
+* sometimes call _l-value_ since its need when a variable appears on the LHS of an assignment statement.
+* A single variable could be associated with multiple addresses, depending on location.
+** subprogram instance variable
+* A single address can have multiple variables associated with it
+** alias
+
+=== Type and Value
+* Type determines the range of values you can store and the set of operations allowed.
+* Value is the abstract memory cell associated with the variable.
+** Abstract memory cells allow you to map different sizes of physical memory with variables of different types.
+* Value is sometimes called _r-value_ since its need when a variable appears on the RHS of an assignment statement.
+
+=== Lifetime and Scope
+* More on that later...
+
+== Binding
+* Association between attribute and entity
+* When association takes place is binding time.
+** This can happen at various points (e.g. compile time, runtime, design time, etc)
+** Example: `*` is bound to multiplication operation at design time, while variable declaration in Java methods happens at runtime.
+
+=== Various Bind Times
+* language design time
+* language implementation time
+* compile time
+* load time
+* link time
+* run time
+
+=== Example Binding
+* Given the Java: `count = count + 5;`
+** Compile time: type of `count` and meaning of `+`
+** compiler design time: set of possible values for `count` and internal representation of `5`
+** Execution time: value of `count`.
+
+=== Static and Dynamic binding
+* Static binding: if a binding occurs before runtime and remains the same.
+* Dynamic binding: if a binding occurs during runtime or changes during runtime.
+
+=== Type Binding
+* When declaring a variable, it needs to be bound to a type
+* How and when a type is specified is important.
+* How a type is specified:
+** Static
+** Dynamic
+
+=== Static Type Binding
+* Static typing occurs during declaration.
+* This can be done explicitly or implicitly.
+* Explicit declaration happens when you _explicitly_ state they type.
+* Implicit declaration happens when the compiler or interpreter can _implicitly_ infer the type based on the declaration.
+* Implicit declaration can use type inference.
+
+=== Explicit Declaration
+.Example Java
+[source]
+----
+int x = 0;
+float y = 0.0;
+String s = "zero";
+----
+
+=== Explicit Declaration
+.Example VB.NET
+[source]
+----
+Dim x As Integer = 0;
+Dim y As Decimal = 0.0;
+Dim s As String = "zero";
+----
+
+=== Explicit Declaration
+.Example VB.NET
+[source]
+----
+Dim x% = 0;
+Dim y@ = 0.0;
+Dim s$ = "zero";
+----
+https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/data-types/type-characters
+
+=== Implicit Declaration
+.Example C#
+[source]
+----
+var x = 0;
+var y = 0.0;
+var s = "zero";
+----
+
+
+=== Dynamic Type Binding
+* Dynamic typing occurs during variable assignment.
+* This happens at execution time.
+* A variable type can also change during execution.
+
+=== Dynamic Type Example
+.Example JavaScript
+[source,JavaScript]
+----
+var x,y,z;
+
+x = 0;
+y = 0.0;
+s = "zero";
+
+x = "another zero";
+y = z;
+----
+
+=== Static vs. Dynamic Typing
+* Dynamic typing gives you more flexibility when writing code.
+** Any variable can be assigned and reassigned to any type.
+** You can also account for handling input that is not typed by the language.
+* Static typing is more reliable, since typing issues can be found at compile time.
+* Dynamic typing also has a huge cause of doing type checking during runtime.
+** This usually restricts dynamically typed languages to interpreters.
+
+
+=== Static Variables
+* variables that are bound to memory before execution and remain the same throughout execution.
+
+
+== Scope
+* Scope determines the visibility, or what statements can reference, a variable.
+* local variables are declared and used in the same program unit or block
+* non-local variables are used in different program unit or block than they are declared
+* Static scoping allows a variable's scope to be determined statically, before execution.
+* Dynamic scoping determines a variables scope during execution.
+
+=== Blocks
+* Blocks allow you to have a new scoped section of code during execution.
+* Variables are allocated and deallocated during execution.
+
+=== Example Block
+.Example Java
+[source,java]
+----
+....
+if (x<=10)
+{
+  int y = 0;
+  //do something
+  ...
+}
+----
+
+=== Example Block
+.Example Java
+[source,JavaScript]
+----
+$.getJSON("http://example.com/rest/example",
+   function(data) {
+    var y = 0;
+    //do something
+   });
+----
+
+
+=== Importance of Order
+* Certain languages require all variables be declared at the beginning
+* Most require that variables be declared before they are used.
+
+
+=== Globals
+* Allows you to declare variables outside of functions or methods
+
+=== Constants
+* Variables that are bound to a value only once.
+
 ** evaluation of scoping
 ** dynamic Scope
 * Constants
