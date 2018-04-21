@@ -67,10 +67,9 @@
 * link:quiz1.html[Quiz 1]
 * Lecture: link:{slides-base-url}syntax.html[Syntax]
 * link:homework2.html[Homework 2]
-* link:{slides-base-url}semantics.html[Semantics]
-* link:{slides-base-url}name-binding-scope.html[Naming, Binding, and Scope]
-* link:{slides-base-url}datatypes.html[Datatypes]
-
+* Lecture: link:{slides-base-url}semantics.html[Semantics]
+* Lecture: link:{slides-base-url}name-binding-scope.html[Naming, Binding, and Scope]
+* Lecture: link:{slides-base-url}datatypes.html[Datatypes]
 ////
 ** link:{slides-base-url}[Expressions and Assignments]
 ** link:{slides-base-url}[Statements-level control structures]
@@ -78,4 +77,4 @@
 ** link:{slides-base-url}[Abstraction, Encapsulation, and Generalization]
 ** link:{slides-base-url}[Programming Language Approaches]
 ////
-* link:{slides-base-url}java-assignment-flow-control.html[Java: Assignment and Flow Control]
+* Lecture: link:{slides-base-url}java-assignment-flow-control.html[Java: Assignment and Flow Control]
