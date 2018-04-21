@@ -1,23 +1,88 @@
 = Datatypes
+Source: Chapter 6 ^link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[4]^
 
-Definition: collection of values and operations you can perform on those values
+== Definition
+* Collection of values and operations you can perform on those values
+* Language provides a set of Datatypes
+* Some languages allow user-defined types
+* Defined using constructors
+* Has a descriptor, which is a collection of attributes of the variable.
 
-Why do we care about types?
+== Why do we care about types?
+* How you create and manipulate data.
+* Provides error detection
+* Provides modularization
 
-Breakdown of types:
+== Primitives
+* any type not defined using other types
 
-* numberic
-** int
-** floating point
-* boolean
-* character
-* strings
-** c-strings
-** other strings
-* ordinal types
-* user-defined types
-** enums
-* array
+=== Numeric Types - Integer
+* `0`, `123`, `-999999`
+* Signed or Unsigned
+* byte, short, int, long
+* Max value
+
+=== Numeric Types - Floating Point
+* `0.0`, `123.45`, `-999999.999999999`
+* Real numbers
+* float, double
+* max value
+* precision defines the accuracy of the floating point
+* range is the range of fractions and exponents it can represent
+
+=== Boolean
+* `true` or `false`
+* sometimes represented by an integer
+** `0` is `false`, everything else is `true`
+
+=== Character
+* Stores numeric encodings
+* `c`, `1`, `*`
+
+== Character Strings
+* sequence of characters
+* primitive or array of characters?
+* static or dynamic length
+* `Sarah`, `Washington D.C.`, `What the %@#$ is a String?`
+
+=== Character Strings Operations
+* assignment
+* catenation
+* substring reference
+* comparison
+* pattern matching
+* manipulation
+
+=== Character String Length
+* static length strings have their length set when they are created
+* limited dynamic length strings can vary in length to a maximum
+* dynamic length strings can vary in length with no maximum
+
+=== Character String Implementation
+* array of characters vs. primitive
+* mutability
+* copy
+* manipulation
+
+== User-defined Ordinal Types
+* Ordinal type is one where range of values can be easily represented by ordinal types
+** integer, char, boolean
+
+=== Enumeration Types
+* all possible values are enumerated
+[source]
+----
+enum months {Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
+
+months myBirthMonth = Jul;
+
+//cannot do
+months invalidMonth = ABC;
+----
+
+
+== Array
+
 ** array implementations
 ** array operationns
 * associative arrays

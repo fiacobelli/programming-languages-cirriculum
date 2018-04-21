@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Assignments and Flow Control - Java</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css" id="theme"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Assignments and Flow Control - Java</h1></section><section><section id="variable_definition_and_evaluation"><h2>Variable Definition and Evaluation</h2></section><section id="simple_declaring"><h2>Simple Declaring</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int x = 1;
+int y , z = 10;
+boolean a = true;
+float a = 1.5;
+int[] nums = {x,y,z};
+char c = 'c';
+String s = "Something interesting";</code></pre></div></div></section><section id="declaring_and_evaluation"><h2>Declaring and Evaluation</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int millisPerDay = 1000*60*60*24;
+int workingDays = (365 / 7) * 5;
+long workingMills = millisPerDay * workingDays;
+long quota = 1000000;
+bool overQuota =  (workingDays * millisPerDay) &gt; quota;
+String message = "Over Quota: " + overQuota;</code></pre></div></div></section><section id="evaluation"><h2>Evaluation</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">7 &lt; 10;
+7 &gt; 10;
+7 &gt;= 10;
+9 &gt;= 9;
+9 &lt;= 9;
+9 == 9;</code></pre></div></div></section><section id="more_evaluation"><h2>More Evaluation</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">7 &lt; 10  ||  7 &gt; 10;
+7 &lt; 10  &amp;&amp;  7 &gt; 10;
+11 &lt; 10 ||  7 &gt; 10;
+11 &lt; 10 XOR 7 &gt; 10;</code></pre></div></div></section><section id="even_more_evaluation"><h2>Even More Evaluation</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">String x = "abc";
+String y = "abc";
+String z = "xyz";
+String xx = "ABC";
+x.equals(x);
+x.equals(y);
+x.equals(z);
+x.equals(xx);</code></pre></div></div></section></section>
+<section><section id="if_else"><h2>if/else</h2></section><section id="two_arm"><h2>Two-Arm</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">if (thisIsTrue)
+{
+  //do something
+}
+else
+{
+  //do something else
+}</code></pre></div></div></section><section id="one_arm"><h2>One-Arm</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">if (thisIsTrue)
+{
+  //do something
+}
+
+if(thatIsTrue)
+{
+  //do something else
+}</code></pre></div></div></section><section id="n_arm"><h2>N-Arm</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">if (thisIsTrue)
+{
+  //do something
+}
+else if(thatIsTrue)
+{
+  //do something else
+}
+else
+{
+  //do another thing
+}</code></pre></div></div></section><section id="case_switch"><h2>case/switch</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int dayOfWeek = 5;
+
+switch(dayOfWeek)
+{
+    case 1:  System.out.println("Mon");
+             break;
+    case 2:  System.out.println("Tues");
+             break;
+    case 3:  System.out.println("Wed");
+             break;
+    case 4:  System.out.println("Thu");
+             break;
+    case 5:  System.out.println("Fri");
+             break;
+    case 6:  System.out.println("Sat");
+             break;
+    case 7:  System.out.println("Sun");
+             break;
+    default: System.out.println("ooops!!!");
+             break;
+    ...
+}</code></pre></div></div></section><section id="nesting"><h2>Nesting</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">if(thisIsTrue)
+{
+  if(thatIsTrue)
+  {
+    //do something
+  }
+}
+...
+if(thisIsTrue &amp;&amp; thatIsTrue){...}</code></pre></div></div></section><section id="ternary_operator"><h2>Ternary Operator</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int x = thisIsTrue ? 10 : 0;</code></pre></div></div></section></section>
+<section><section id="looping"><h2>Looping</h2></section><section id="while"><h2>While</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int x = 7;
+int i = 0;
+while(i &lt;= x);
+{
+  System.out.println(i);
+}</code></pre></div></div></section><section id="for"><h2>For</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int x = 7;
+for(int i = 0; i &lt; x; i++);
+{
+  System.out.println(i);
+}</code></pre></div></div></section><section id="for_2"><h2>For</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int[] nums = {1,2,3,4,5,6,7};
+
+for(int i = 0; i &lt; nums.length; i++);
+{
+  System.out.println(nums[i]);
+}</code></pre></div></div></section></section>
+<section id="iteration"><h2>Iteration</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int[] nums = {1,2,3,4,5,6,7};
+for(int x : nums)
+{
+  System.out.println(x);
+}</code></pre></div></div></section>
+<section id="exceptions"><h2>Exceptions</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">int[] nums = {1,2,3,4,5,6,7};
+int x = 10;
+
+try {
+  for(int i = 0; i &lt; x; i++);
+  {
+    System.out.println(nums[i]);
+  }
+} catch (Exception e) {
+  //Something wrong happened
+} finally {
+  //do something regardless of success or failure
+}</code></pre></div></div></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Set a per-slide timing for speaker notes, null means none
+  defaultTiming: null,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'black',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true }
+  ]
+});</script></body></html>

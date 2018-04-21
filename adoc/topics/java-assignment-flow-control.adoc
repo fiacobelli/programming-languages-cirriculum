@@ -1,0 +1,216 @@
+= Assignments and Flow Control - Java
+
+
+==  Variable Definition and Evaluation
+
+=== Simple Declaring
+[source,java]
+----
+int x = 1;
+int y , z = 10;
+boolean a = true;
+float a = 1.5;
+int[] nums = {x,y,z};
+char c = 'c';
+String s = "Something interesting";
+----
+
+=== Declaring and Evaluation
+[source,java]
+----
+int millisPerDay = 1000*60*60*24;
+int workingDays = (365 / 7) * 5;
+long workingMills = millisPerDay * workingDays;
+long quota = 1000000;
+bool overQuota =  (workingDays * millisPerDay) > quota;
+String message = "Over Quota: " + overQuota;
+----
+
+=== Evaluation
+[source,java]
+----
+7 < 10;
+7 > 10;
+7 >= 10;
+9 >= 9;
+9 <= 9;
+9 == 9;
+----
+
+=== More Evaluation
+[source,java]
+----
+7 < 10  ||  7 > 10;
+7 < 10  &&  7 > 10;
+11 < 10 ||  7 > 10;
+11 < 10 XOR 7 > 10;
+----
+
+=== Even More Evaluation
+[source,java]
+----
+String x = "abc";
+String y = "abc";
+String z = "xyz";
+String xx = "ABC";
+x.equals(x);
+x.equals(y);
+x.equals(z);
+x.equals(xx);
+----
+
+== if/else
+
+=== Two-Arm
+[source,java]
+----
+if (thisIsTrue)
+{
+  //do something
+}
+else
+{
+  //do something else
+}
+----
+
+=== One-Arm
+[source,java]
+----
+if (thisIsTrue)
+{
+  //do something
+}
+
+if(thatIsTrue)
+{
+  //do something else
+}
+----
+
+=== N-Arm
+[source,java]
+----
+if (thisIsTrue)
+{
+  //do something
+}
+else if(thatIsTrue)
+{
+  //do something else
+}
+else
+{
+  //do another thing
+}
+----
+
+=== case/switch
+[source,java]
+----
+int dayOfWeek = 5;
+
+switch(dayOfWeek)
+{
+    case 1:  System.out.println("Mon");
+             break;
+    case 2:  System.out.println("Tues");
+             break;
+    case 3:  System.out.println("Wed");
+             break;
+    case 4:  System.out.println("Thu");
+             break;
+    case 5:  System.out.println("Fri");
+             break;
+    case 6:  System.out.println("Sat");
+             break;
+    case 7:  System.out.println("Sun");
+             break;
+    default: System.out.println("ooops!!!");
+             break;
+    ...
+}
+----
+
+=== Nesting
+[source,java]
+----
+if(thisIsTrue)
+{
+  if(thatIsTrue)
+  {
+    //do something
+  }
+}
+...
+if(thisIsTrue && thatIsTrue){...}
+----
+
+=== Ternary Operator
+[source,java]
+----
+int x = thisIsTrue ? 10 : 0;
+----
+
+==  Looping
+
+=== While
+[source,java]
+----
+int x = 7;
+int i = 0;
+while(i <= x);
+{
+  System.out.println(i);
+}
+----
+
+=== For
+[source,java]
+----
+int x = 7;
+for(int i = 0; i < x; i++);
+{
+  System.out.println(i);
+}
+----
+
+=== For
+[source,java]
+----
+int[] nums = {1,2,3,4,5,6,7};
+
+for(int i = 0; i < nums.length; i++);
+{
+  System.out.println(nums[i]);
+}
+----
+
+
+== Iteration
+[source,java]
+----
+int[] nums = {1,2,3,4,5,6,7};
+for(int x : nums)
+{
+  System.out.println(x);
+}
+----
+
+==  Exceptions
+[source,java]
+----
+int[] nums = {1,2,3,4,5,6,7};
+int x = 10;
+
+try {
+  for(int i = 0; i < x; i++);
+  {
+    System.out.println(nums[i]);
+  }
+} catch (Exception e) {
+  //Something wrong happened
+} finally {
+  //do something regardless of success or failure
+}
+----

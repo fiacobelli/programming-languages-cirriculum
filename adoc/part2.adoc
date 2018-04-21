@@ -3,12 +3,7 @@
 
 == Declarative/imperative Languages
 
-=== Assignments and flow Control
-* variable definition and evaluation
-* looping
-* iteration
-* if/then/case
-* exceptions
+include::topics/java-assignment-flow-control.adoc[leveloffset=+2]
 
 === Typing
 * primitives and first-class citizens
