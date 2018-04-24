@@ -72,12 +72,12 @@ Source: Chapter 6 ^link:https://github.com/rhoads-zach/programming-languages-cir
 * all possible values are enumerated
 [source]
 ----
-enum months {Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
+enum months {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
 
-months myBirthMonth = Jul;
+months myBirthMonth = months.JUL;
 
 //cannot do
-months invalidMonth = ABC;
+months invalidMonth = months.ABC;
 ----
 
 

@@ -5,22 +5,7 @@
 
 include::topics/java-assignment-flow-control.adoc[leveloffset=+2]
 
-=== Typing
-* primitives and first-class citizens
-** how are strings handled?
-** mutability vs. immutability
-* operators
-* enums
-* structs
-* classes/objects
-** pointers
-** compare to primitives
-* evaluating and comparing
-** precision
-** integer divide
-** `=` vs. `==`
-* static and dynamic
-* strong and weak
+
 
 === Functions
 * definition

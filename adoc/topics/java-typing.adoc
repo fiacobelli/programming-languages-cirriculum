@@ -1,0 +1,179 @@
+= Typing - Java
+
+== Type System - Statically Typed
+* _The Java programming language is a statically typed language, which means that every variable and every expression has a type that is known at compile time._
+
+https://docs.oracle.com/javase/specs/jls/se9/html/jls-4.html
+
+== Type System - Strongly Typed
+* _The Java programming language is also a strongly typed language, because types limit the values that a variable (§4.12) can hold or that an expression can produce, limit the operations supported on those values, and determine the meaning of the operations. Strong static typing helps detect errors at compile time._
+
+https://docs.oracle.com/javase/specs/jls/se9/html/jls-4.html
+
+== Primitives - Numeric
+[source,java]
+----
+int x = 1;
+float y = 1.5;
+long xx = 9876543210;
+double yy = 9876543210.987654321
+//less used
+byte z = 127;
+short zz = 32767;
+----
+
+== Primitives - Non-Numeric
+[source,java]
+----
+boolean b = true;
+char c = 'c';
+----
+
+== Arrays
+[source,java]
+----
+int[] x = {1,2,3};
+boolean[] b = {true,false};
+----
+
+== Strings
+[source,java]
+----
+String s = "This is my String!";
+----
+
+== Enums
+[source,java]
+----
+enum months {JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC};
+----
+
+== Operators
+
+=== Operators - Numeric
+[source,java]
+----
+i = i + 1;
+x = 10 - 5;
+boolean b = i >= x;
+y++; ++y;
+z--; --z;
+z < y || b;
+a && b;
+----
+https://docs.oracle.com/javase/specs/jls/se9/html/jls-4.html#jls-4.2.2
+
+=== Operators - Non-Numeric
+[source,java]
+----
+String s = "my string";
+String s2 = "This "+"is a string: "+s;
+----
+
+
+=== Strings are Immutable
+[source,java]
+----
+String s = "Something";
+
+//this creates a brand new string
+s = s + " else?";
+
+//compare to:
+int i = 1;
+i = i + 1;
+----
+
+== Classes and Objects
+* Classes are _reference types_ in Java
+** https://docs.oracle.com/javase/specs/jls/se9/html/jls-4.html#jls-4.3
+* An object is an _instance_ of a class
+
+=== Declaring an Object
+[source,java]
+----
+MyClass x = new MyClass();
+String s = new String();
+----
+
+=== Pointers?
+* Java does not expose pointers
+** Handles them for the programmer
++
+[source,java]
+----
+MyClass x = new MyClass();
+MyClass y = new MyClass();
+x = y;
+----
+
+=== Objects are Mutable
+[source,java]
+----
+MyClass x = new MyClass();
+x.setName("my name");
+----
+
+=== ...But Strings Are Not
+[source,java]
+----
+String s = "One thing";
+s = s + " to do";
+----
+
+=== ...But there are string buffers
+[source,java]
+----
+StringBuffer sb = new StringBuffer("Something");
+sb.append(" else?");
+String s = sb.toString();
+----
+
+=== Working With Objects
+* Use methods
+[source,java]
+----
+int i = 1;
+i = i + 5;
+Integer ii = new Integer(1);
+int temp = ii.intValue() + 5;
+ii = new Integer(temp);
+----
+
+== Evaluating and Comparing
+
+=== Evaluation: Integer Divide
+* `365.0 / 7.0` -> 52.14
+* `365 / 7` -> 52
+* `365 % 7` -> 1
+
+=== Evaluation: Order of Operations
+* `(1 + 2) * 5` -> 15
+* `1 + 2 * 5`   -> 11
+* `1 + (2 * 5)` -> 11
+
+=== Even More Evaluation
+[source,java]
+----
+String x = "abc";
+String y = "abcd";
+x.compareTo(xx);
+x.compareTo(y);
+----
+
+=== Even More Evaluation
+[source,java]
+----
+String x = "abc";
+String y = "abc";
+String z = "xyz";
+String xx = "ABC";
+x.equals(x);
+x == x;
+x == y;
+x < z;
+x.compareTo(z);
+x.equals(y);
+x.equals(z);
+x.equals(xx);
+----
