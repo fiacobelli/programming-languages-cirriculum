@@ -79,3 +79,4 @@
 ////
 * Lecture: link:{slides-base-url}java-assignment-flow-control.html[Java: Assignment and Flow Control]
 * Lecture: link:{slides-base-url}java-typing.html[Java: Typing]
+* Lecture: link:{slides-base-url}java-functions.html[Java: Methods]

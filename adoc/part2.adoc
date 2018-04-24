@@ -5,14 +5,10 @@
 
 include::topics/java-assignment-flow-control.adoc[leveloffset=+2]
 include::topics/java-typing.adoc[leveloffset=+2]
+include::topics/java-functions.adoc[leveloffset=+2]
 
 
-=== Functions
-* definition
-* return values
-** returning multiple values
-* call by value v.s. call by reference
-* scoping with functions
+
 
 
 === interpreted and compiled

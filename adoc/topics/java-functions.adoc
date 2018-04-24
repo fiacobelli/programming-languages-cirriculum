@@ -1,0 +1,131 @@
+= Functions - Java
+
+== Methods
+* Java uses methods since its completely object oriented.
+* https://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.4
+
+== Defining Methods
+[source,java]
+----
+public class MyClass
+{
+  public void doSomething()
+  {
+    ...
+  }
+}
+----
+
+== Defining Methods
+* Scope of methods
+* static methods
+
+== Calling Methods
+[source,java]
+----
+MyClass c = new MyClass();
+c.doSomething();
+----
+
+== Return Values
+[source,java]
+----
+public class MyClass
+{
+  public String saySomething()
+  {
+    return "something";
+  }
+}
+----
+
+== Parameters
+[source,java]
+----
+public class MyClass
+{
+  public String repeat(String s)
+  {
+    return "you said: "+s;
+  }
+}
+----
+
+== Returning Multiple Values
+* Java does not allow for multiple return values
+* But you can return a collection
+
+[source,java]
+----
+public class MyClass
+{
+  public String[] repeatTwice(String s, String s2)
+  {
+    String[] response = {s,s2};
+
+    return response;
+  }
+}
+----
+
+== Methods Create a New Scope
+[source,java]
+----
+public class MyClass
+{
+  String name = "Sarah";
+
+  public String saySomething(String s);
+  {
+    String name = s;
+    return name + " vs. " + this.name;
+  }
+}
+----
+
+== Methods Use Call by Reference
+.Example method
+[source,java]
+----
+public class MyClass
+{
+  public String repeat(String s)
+  {
+    s = "you said: "+s;
+    return s;
+  }
+}
+----
+
+== Methods Use Call by Reference for Parameters
+.Example usage
+[source,java]
+----
+String name = "Hi Sarah!";
+MyClass c = new MyClass();
+String result = c.repeat(name);
+System.out.println(name + " vs. " + result);
+----
+
+== Primitives are Call by Value
+.Example method
+[source,java]
+----
+public class MyClass
+{
+  public int addOne(int i)
+  {
+    return i++;
+  }
+}
+----
+
+== Primitives are Call by Value
+.Example usage
+[source,java]
+----
+int num = 10;
+MyClass c = new MyClass();
+int result = c.addOne(num);
+System.out.println(num + " vs. " + result);
+----
