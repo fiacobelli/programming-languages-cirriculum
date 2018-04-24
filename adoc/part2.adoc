@@ -4,7 +4,7 @@
 == Declarative/imperative Languages
 
 include::topics/java-assignment-flow-control.adoc[leveloffset=+2]
-
+include::topics/java-typing.adoc[leveloffset=+2]
 
 
 === Functions
