@@ -18,10 +18,12 @@ Additional requirements:
 * An order exceeding the amount of fruit available is not allowed
 
 You must implement the backend portion 2 ways:
+
 . Using a strongly typed language
 . Using a weakly typed language
 
 You must implement the front end portion as HTML in 2 different ways:
+
 . Using a standard POST/REDIRECT approach
 . Using a reactive approach with javascript
 
@@ -34,15 +36,22 @@ Create a rudimentary _Read it later_ application consisting of:
 
 The URL submission form must provide a way to submit the URL to the message queue.
 
-The message queue must be able to receive URLs and store them until they are processed by the crawler.
+The message queue must be able to receive URLs and store them until they are processed by the crawler. The message queue must be an existing implementation such as:
+
+* http://activemq.apache.org
+* http://www.restmq.com
+* https://www.rabbitmq.com
+* http://www.snakemq.net
 
 The crawler must:
+
 * Check the queue periodically (e.g. every 5 minutes) for new URLs
 * Retrieve each URL separately for processing
 ** To process a URL, scrape the `<title>` portion from the URL.
 * Persist the URL and page title in some way
 * Have a simple page for displaying the processed URLs
 
+You must implement the crawler using a declarative/imperative language and separately using a functional language. Each crawler implementation may use a common message queue or separate message queues.
 
 
 == Option 3: 2 Approaches to Concurrency
