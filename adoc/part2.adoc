@@ -3,7 +3,6 @@
 
 == Declarative/Imperative Languages
 
-
 === Java
 
 include::topics/java-about.adoc[leveloffset=+3]
@@ -13,17 +12,7 @@ include::topics/java-functions.adoc[leveloffset=+3]
 
 === Javascript
 
-
-
-=== interpreted and compiled
-* pros and cons of each
-* error handling in each
-* Troubleshooting and coding
-** When will syntax issues show up?
-** When can you catch evaluation issues?
-** How do you debug programs?
-** compile time issues vs. runtime issues
-
+include::topics/interpreted-compiled-languages-comparison.adoc[leveloffset=+2]
 
 == Functional Languages
 

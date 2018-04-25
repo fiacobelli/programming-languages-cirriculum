@@ -1,0 +1,41 @@
+= Interpreted and Compiled Languages
+
+== Interpreted Languages
+
+https://en.wikipedia.org/wiki/Interpreted_language
+
+=== Pros and Cons
+* Pro: dynamic typing and scoping
+* Pro: more platform independence
+** Language not complied for a specific platform
+* Pro: Option to use a link:https://en.wikipedia.org/wiki/Read–eval–print_loop[REPL]
+* Con: Slower execution
+* Con: Lack of static type checking
+
+=== Coding Considerations
+* Syntax issues usually do not show up until runtime.
+* Syntax can be tested using a REPL.
+* Debugger can attach directly to source since code is run directly
+* link:https://en.wikipedia.org/wiki/Monkey_patch[Monkey patching] is an option
+* Type issues can be difficult to find until runtime
+
+
+== Compiled Languages
+
+https://en.wikipedia.org/wiki/Compiled_language
+
+=== Pros and Cons
+* Pro: Faster execution
+* Pro: Static type checking
+** Catch more issues at compile time
+* Con: Can be platform-dependent
+* Con: no dynamic typing or scoping
+
+=== Coding Considerations
+* Using an IDE with a real-time compiler can give you:
+** Active syntax checking
+** Active type checking
+* Many issues can be caught before runtime
+* Debugger must attached to code after compilation
+* No access to REPL
+* Must re-compile for different platforms
