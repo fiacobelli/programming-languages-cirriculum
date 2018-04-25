@@ -1,13 +1,17 @@
 
 = Part2 - Basics in Action
 
-== Declarative/imperative Languages
-
-include::topics/java-assignment-flow-control.adoc[leveloffset=+2]
-include::topics/java-typing.adoc[leveloffset=+2]
-include::topics/java-functions.adoc[leveloffset=+2]
+== Declarative/Imperative Languages
 
 
+=== Java
+
+include::topics/java-about.adoc[leveloffset=+3]
+include::topics/java-assignment-flow-control.adoc[leveloffset=+3]
+include::topics/java-typing.adoc[leveloffset=+3]
+include::topics/java-functions.adoc[leveloffset=+3]
+
+=== Javascript
 
 
 

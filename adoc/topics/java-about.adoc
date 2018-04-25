@@ -1,0 +1,6 @@
+= About Java
+
+* The Java programming language is strongly and statically typed.
+* Java is compiled to a bytecode instruction set and run in the Java Virtual Machine.
+
+https://docs.oracle.com/javase/specs/jls/se9/html/jls-1.html

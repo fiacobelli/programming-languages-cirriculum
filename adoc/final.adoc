@@ -1,0 +1,49 @@
+= Final Project
+
+Implement _one_ of the following:
+
+== Option 1: 2 Approaches to Database Applications
+Create an application for managing an inventory of fruit and placing orders against the inventory.
+
+The application must have the following UI:
+
+* A form for creating a new type of fruit in the inventory
+* A form for updating the number of fruit available
+* A form for placing an order for a given number of a single fruit
+* A page displaying the current fruit inventory
+
+Additional requirements:
+
+* The application must use a database to maintain the fruit inventory
+* An order exceeding the amount of fruit available is not allowed
+
+You must implement the backend portion 2 ways:
+. Using a strongly typed language
+. Using a weakly typed language
+
+You must implement the front end portion as HTML in 2 different ways:
+. Using a standard POST/REDIRECT approach
+. Using a reactive approach with javascript
+
+
+== Option 2: 2 Approaches to Message Queues
+Create a rudimentary _Read it later_ application consisting of:
+. A form for submitting a URL to read later
+. A simple crawling application
+. A message queue to handle URL submissions
+
+The URL submission form must provide a way to submit the URL to the message queue.
+
+The message queue must be able to receive URLs and store them until they are processed by the crawler.
+
+The crawler must:
+* Check the queue periodically (e.g. every 5 minutes) for new URLs
+* Retrieve each URL separately for processing
+** To process a URL, scrape the `<title>` portion from the URL.
+* Persist the URL and page title in some way
+* Have a simple page for displaying the processed URLs
+
+
+
+== Option 3: 2 Approaches to Concurrency
+Given a list of at least 25 URLs to RSS feeds, create a parallelized fetching implementation that returns the 10 latest entries from each feed. You must implement this once in a imperative or declarative language and a second time in a functional language. You also must to create some sort of html-based display mechanism which displays all the entries organized by feed and sorted chronologically. This display mechanism may be shared between your implementations.
