@@ -1,0 +1,9 @@
+= Homework 3
+
+Create an application that exposes a RESTful service that handles the four basic math operations (`+`,`-`,`*`,`/`) on two numbers.
+
+You must implement this application twice:
+* With a Statically typed language
+* With a Dynamically typed language
+
+Create each application in a different Github repo and send in the link to each. Each repo should also contain a `README.md` file that explains how to install, run and interact with the application. This file should be formatted using markdown.

@@ -16,20 +16,11 @@ include::topics/interpreted-compiled-languages-comparison.adoc[leveloffset=+2]
 
 == Functional Languages
 
-=== Lambdas
-* Lambda calculus
-* Lambda functions
-** examples in different languages
+include::topics/lambdas.adoc[leveloffset=+2]
+include::topics/scheme-about.adoc[leveloffset=+2]
+include::topics/scheme-typing.adoc[leveloffset=+2]
 
-=== Blocks
-* Difference between lambdas and blocks
-** Examples in different languages
 
-=== passing functions
-* Passing functions into functions
-** by Names
-** as blocks
-** as callbacks
 
 === Pros and cons
 * where do functional languages shine?

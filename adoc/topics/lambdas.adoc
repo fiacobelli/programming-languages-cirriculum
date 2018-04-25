@@ -1,0 +1,100 @@
+= Lambdas
+
+== Lambda calculus
+* Formal system in formal system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution.
+** https://en.wikipedia.org/wiki/Lambda_calculus
+* Turing-complete
+
+
+== Lambda Functions
+* Used in programming languages to define functions using lambda calculus.
+
+.Example lambda function to double a number in LISP
+[source,lisp]
+----
+(lambda (num) (* num 2))
+----
+
+* By default, a lambda function is anonymous unless it is given a name.
+
+== Lambda Functions Recursion
+* Most functional programming relies on lambdas and recursion
+
+.Example factorial function in Scheme
+[source]
+----
+(define factorial
+  (lambda (num)
+    (cond
+      ((< num 2) 1)
+      (else (* num (factorial (- n 1))))
+    )
+  )
+)
+
+(factorial 1) -> 1
+(factorial 2) -> 2
+(factorial 3) -> 6
+(factorial 5) -> 120
+----
+
+== Blocks and Lambdas
+* Both blocks and lambdas introduce a new scope.
+* Lambdas are actual functions, while blocks do no have to be.
+
+
+== passing functions
+* Using lambdas, you can pass lambda functions as parameters
+
+== Passing Functions by Name
+https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#syntax
+[source,java]
+----
+public class Calculator {
+
+    interface IntegerMath {
+        int operation(int a, int b);
+    }
+
+    public int operateBinary(int a, int b, IntegerMath op) {
+        return op.operation(a, b);
+    }
+
+    public static void main(String... args) {
+
+        Calculator myApp = new Calculator();
+        IntegerMath addition = (a, b) -> a + b;
+        IntegerMath subtraction = (a, b) -> a - b;
+        System.out.println("40 + 2 = " +
+            myApp.operateBinary(40, 2, addition));
+        System.out.println("20 - 10 = " +
+            myApp.operateBinary(20, 10, subtraction));
+    }
+}
+----
+
+=== Passing Functions as Blocks
+https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#approach6
+[source,java]
+----
+printPersonsWithPredicate(
+    roster,
+    p -> p.getGender() == Person.Sex.MALE
+        && p.getAge() >= 18
+        && p.getAge() <= 25
+);
+----
+
+=== Using Functions as Callbacks
+* Callbacks are functions that are invoked in reaction to something happening.
+** e.g. response from an HTTP request, button clicked, etc.
+
+.Javascript link:https://www.w3schools.com/jquery/jquery_callback.asp[Example]
+[source,javascript]
+----
+$("button").click(function(){
+    $("p").hide("slow", function(){
+        alert("The paragraph is now hidden");
+    });
+});
+----

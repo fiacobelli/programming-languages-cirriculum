@@ -1,0 +1,9 @@
+= Homework 4
+
+Create an HTML front end for each of your applications you submitted for link:homework3.html[Homework 3].
+
+Each HTML front end should provide a form to interact with your RESTful service.
+
+One front end should use a POST/REDIRECT approach that displays a result page.
+
+The other front end should use a javascript-based reactive page for interacting with the application and displaying the results.

@@ -1,0 +1,7 @@
+= Quiz 2
+
+. What is the difference between syntax and semantics?
+. What is the difference between strong typing and weak tying?
+. What is the difference between static typing and dynamic typing?
+. Give an example declaration using a static typed language.
+. Give an example declaration using a dynamic typed language.
