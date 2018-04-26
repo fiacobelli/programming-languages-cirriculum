@@ -1,5 +1,49 @@
 = Assignments and Flow Control - Scheme
 
-== Car
+== Prefix notation
 
-== Cons
+== car
+* Gives you the `HEAD` of a non-empty list.
+[source]
+----
+(car (some thing)) -> some
+(car ((some thing) else)) -> (some thing)
+(car (() another thing)) -> ()
+(car something) -> err
+(car ()) -> error
+----
+
+== cdr
+* Gives you the `TAIL` of a list.
+[source]
+----
+(cdr (some thing)) -> (thing)
+(cdr ((some thing) else)) -> (else)
+(cdr (() another thing)) -> (another thing)
+(cdr something) -> ()
+(cdr ()) -> ???
+----
+
+== cons
+* Combines any s-expression with a list.
+[source]
+----
+(cons a (b c)) -> (a b c)
+(cons (b c) a) -> err
+(cons (b c) (a)) -> ((b c) a)
+(cons (car (b c)) (a)) -> (b a)
+(cons a (cdr (b c))) -> (a c)
+----
+
+== Math
+[source]
+----
+(+ 1 2) -> 3
+(- 1 2) -> -1
+(* 4 2) -> 8
+(/ 4 2) -> 2
+(* 3 (+ 4 5)) -> 27
+----
+
+== Tests
+* `eq?`, `null?`, `atom?`

@@ -1,7 +1,48 @@
 = Typing - Scheme
 
 == Atom
+* Individual element
+** String
+** Number
+** Boolean
+** Character
+** Symbol
 
-== S-expressions
+=== Atom Examples
+[source]
+----
+"John Smith"
+42
+true
+c
+$
+----
+
 
 == List
+* One or more s-expressions surrounded by parentheses.
+* Lists may be nested
+
+=== List Examples
+[source]
+----
+(John)
+(John Smith 42 )
+(John (Smith) "John Smith" (1 2 42))
+()
+( ( () () () ) () )
+----
+
+== S-expressions
+* Either
+** An atom
+** a pair
+** A list
+
+[source]
+----
+"John Smith"
+c . 42
+(a b c (a) ((())) )
+()
+----

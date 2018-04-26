@@ -78,12 +78,17 @@
 ** link:{slides-base-url}[Abstraction, Encapsulation, and Generalization]
 ** link:{slides-base-url}[Programming Language Approaches]
 ////
-* Lecture: link:{slides-base-url}java-about.html[Java: About]
+* Lecture: link:{slides-base-url}java-about.html[About Java]
 * Lecture: link:{slides-base-url}java-assignment-flow-control.html[Java: Assignment and Flow Control]
 * Lecture: link:{slides-base-url}java-typing.html[Java: Typing]
 * Lecture: link:{slides-base-url}java-functions.html[Java: Methods]
 * Lecture: link:{slides-base-url}interpreted-compiled-languages-comparison.html[Interpreted and Compiled Comparison]
+* Lecture: link:{slides-base-url}lambdas.html[Lambdas]
+* Lecture: link:{slides-base-url}scheme-about.html[About Scheme]
+* Lecture: link:{slides-base-url}scheme-typing.html[Scheme: Typing]
+* Lecture: link:{slides-base-url}scheme-assignments-flow-control.html[Scheme: Assignments and Flow Control]
 
 * link:homework3.html[Homework 3]
 * link:homework4.html[Homework 4]
+* Lecture: link:{slides-base-url}crud.html[CRUD]
 * link:final.html[Final Project]

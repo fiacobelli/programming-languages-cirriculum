@@ -2,9 +2,21 @@
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Typing - Scheme</h1></section><section id="atom"><h2>Atom</h2></section>
-<section id="s_expressions"><h2>S-expressions</h2></section>
-<section id="list"><h2>List</h2></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Typing - Scheme</h1></section><section><section id="atom"><h2>Atom</h2><div class="ulist"><ul><li><p>Individual element</p><div class="ulist"><ul><li><p>String</p></li><li><p>Number</p></li><li><p>Boolean</p></li><li><p>Character</p></li><li><p>Symbol</p></li></ul></div></li></ul></div></section><section id="atom_examples"><h2>Atom Examples</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>"John Smith"
+42
+true
+c
+$</code></pre></div></div></section></section>
+<section><section id="list"><h2>List</h2><div class="ulist"><ul><li><p>One or more s-expressions surrounded by parentheses.</p></li><li><p>Lists may be nested</p></li></ul></div></section><section id="list_examples"><h2>List Examples</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>(John)
+(John Smith 42 )
+(John (Smith) "John Smith" (1 2 42))
+()
+( ( () () () ) () )</code></pre></div></div></section></section>
+<section id="s_expressions"><h2>S-expressions</h2><div class="ulist"><ul><li><p>Either</p><div class="ulist"><ul><li><p>An atom</p></li><li><p>a pair</p></li><li><p>A list</p></li></ul></div></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>"John Smith"
+c . 42
+(a b c (a) ((())) )
+()</code></pre></div></div></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

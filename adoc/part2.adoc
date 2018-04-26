@@ -19,6 +19,7 @@ include::topics/interpreted-compiled-languages-comparison.adoc[leveloffset=+2]
 include::topics/lambdas.adoc[leveloffset=+2]
 include::topics/scheme-about.adoc[leveloffset=+2]
 include::topics/scheme-typing.adoc[leveloffset=+2]
+include::topics/scheme-assignments-flow-control.adoc[leveloffset=+2]
 
 
 

@@ -12,16 +12,25 @@
 * Transactions are a set of database operations that are handled as a single operation.
 * If one of the operations in the transaction fails, all operations in the transaction are undone or _rolled back_.
 
-=== Transaction Exmample
+=== Transaction Example
 * A _Reservation_ is represented across three tables: `flight`, `hotel`, `car_rental`.
 * When creating or updating a _Reservation_, operations on all 3 tables are required and handled as a transaction.
-* Assume an existing reservation's dates are moved 2 days forwards:
-** Transaction is started
-** Entry in `flight` table is updated and succeeds
-** Entry in `hotel` table is updated and succeeds
-** Entry in `car_rental` table fails
-** Previous 2 updates are undone
-** Transaction is aborted
+* Assume an existing reservation's dates are moved 2 days forwards
+
+=== Transaction Success Example
+. Transaction is started
+. Entry in `flight` table is updated and succeeds
+. Entry in `hotel` table is updated and succeeds
+. Entry in `car_rental` table is updated and succeeds
+. Transaction is successful
+
+=== Transaction Abort Example
+. Transaction is started
+. Entry in `flight` table is updated and succeeds
+. Entry in `hotel` table is updated and succeeds
+. Entry in `car_rental` table fails
+. Previous 2 updates are undone
+. Transaction is aborted
 
 == How Different Languages Handle CRUD
 
