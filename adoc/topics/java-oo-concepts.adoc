@@ -1,0 +1,57 @@
+= Object Oriented Concepts - Java
+
+== Encapsulation
+[source,java]
+----
+class Thing
+{
+  public String name;
+  private int id;
+
+  public String toString()
+  {
+    return id + ":" + name;
+  }
+}
+----
+
+
+== Inheritance
+[source,java]
+----
+class Rectangle
+{
+  public String name;
+  public int length;
+  public int width;
+}
+
+class Square
+{
+  public void setSide(int size)
+  {
+    this.length = size;
+    this.width = size;
+  }
+}
+----
+
+== Polymorphism
+[source,java]
+----
+Square sq = new Square();
+Rectange rect = (Rectange) sq;
+----
+
+== Generics
+* Allows you to bound the type that can be set, such as in a collection
+[source,java]
+----
+ArrayList<Rectangle> rects = new ArrayList<Rectangle>();
+rects.add(new Rectangle());
+rects.add(new Square());
+----
+
+== Comparators
+* Provides a comparison function between two objects of the same type.
+* Used for sorting or direct comparisons.

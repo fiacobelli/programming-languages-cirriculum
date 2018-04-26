@@ -1,18 +1,8 @@
 = Part3 - Problem Solving
 
 include::topics/crud.adoc[leveloffset=+1]
-
-
-
-== Concurrency
-* What is it?
-* Parallelization
-* non-blocking operations
-
-== Events
-* Event loops
-* Responding to events
-** Reactive programming
+include::topics/concurrency.adoc[leveloffset=+1]
+include::topics/events.adoc[leveloffset=+1]
 
 == Distributed Systems and Microservices
 

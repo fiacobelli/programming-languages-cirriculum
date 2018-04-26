@@ -1,35 +1,15 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Assignments and Flow Control - Scheme</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css" id="theme"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Concurrency</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css" id="theme"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Assignments and Flow Control - Scheme</h1></section><section id="prefix_notation"><h2>Prefix notation</h2></section>
-<section id="car"><h2>car</h2><div class="ulist"><ul><li><p>Gives you the <code>HEAD</code> of a non-empty list.</p></li></ul></div>
-<div class="listingblock"><div class="content"><pre class="highlight"><code>(car (some thing)) -&gt; some
-(car ((some thing) else)) -&gt; (some thing)
-(car (() another thing)) -&gt; ()
-(car something) -&gt; err
-(car ()) -&gt; error</code></pre></div></div></section>
-<section id="cdr"><h2>cdr</h2><div class="ulist"><ul><li><p>Gives you the <code>TAIL</code> of a list.</p></li></ul></div>
-<div class="listingblock"><div class="content"><pre class="highlight"><code>(cdr (some thing)) -&gt; (thing)
-(cdr ((some thing) else)) -&gt; (else)
-(cdr (() another thing)) -&gt; (another thing)
-(cdr something) -&gt; ()
-(cdr ()) -&gt; ???</code></pre></div></div></section>
-<section id="cons"><h2>cons</h2><div class="ulist"><ul><li><p>Combines any s-expression with a list.</p></li></ul></div>
-<div class="listingblock"><div class="content"><pre class="highlight"><code>(cons a (b c)) -&gt; (a b c)
-(cons (b c) a) -&gt; err
-(cons (b c) (a)) -&gt; ((b c) a)
-(cons (car (b c)) (a)) -&gt; (b a)
-(cons a (cdr (b c))) -&gt; (a c)</code></pre></div></div></section>
-<section id="math"><h2>Math</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>(+ 1 2) -&gt; 3
-(- 1 2) -&gt; -1
-(* 4 2) -&gt; 8
-(/ 4 2) -&gt; 2
-(* 3 (+ 4 5)) -&gt; 27</code></pre></div></div></section>
-<section id="tests"><h2>Tests</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>* `eq?` - compares non-numeric atoms
-* `=`, `&lt;`, `&gt;` - compares numeric atoms
-* `atom?` - checks if parameter is an atom
-* `null?` - checks if parameter is an empty list</code></pre></div></div></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Concurrency</h1></section><section id="what_is_concurrency"><h2>What is Concurrency</h2><div class="ulist"><ul><li><p><a href="https://en.wikipedia.org/wiki/Concurrent_computing" class="bare">https://en.wikipedia.org/wiki/Concurrent_computing</a></p></li><li><p>Several computations executed during overlapping times or at the same time</p></li><li><p>Can also be referred to as parallel computing.</p></li></ul></div></section>
+<section id="what_problems_are_good_fit_for_concurrency"><h2>What Problems are Good Fit for Concurrency</h2><div class="paragraph"><p><a href="https://en.wikipedia.org/wiki/Embarrassingly_parallel" class="bare">https://en.wikipedia.org/wiki/Embarrassingly_parallel</a>
+* Non-blocking operations
+* Static file serving
+* Lots of simulations</p></div></section>
+<section id="example"><h2>Example</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="javascript language-javascript">app.use('/sayHello', (req, res) =&gt; {
+  res.send({content: `hi!'}`});
+});</code></pre></div></div></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: true,

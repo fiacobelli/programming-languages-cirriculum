@@ -46,4 +46,8 @@
 ----
 
 == Tests
-* `eq?`, `null?`, `atom?`
+[source]
+* `eq?` - compares non-numeric atoms
+* `=`, `<`, `>` - compares numeric atoms
+* `atom?` - checks if parameter is an atom
+* `null?` - checks if parameter is an empty list 

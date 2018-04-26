@@ -1,0 +1,32 @@
+= Object Oriented Programming Concepts
+
+== Core Concepts
+* https://en.wikipedia.org/wiki/Object-oriented_programming
+* Based on the concept of objects
+** Fields containing data
+** Methods that perform operations
+* Classes are the definition
+* Objects are the instances
+
+== Encapsulation
+* Binds together data and methods
+* Concept of data hiding
+** Data can be hidden from outside objects with scopes
+
+== Inheritance
+* Parent child relationship between classes
+* Child _inherits_ fields and methods from the parent class
+** scope can be use to encapsulate methods and fields from child
+* _Shape_ -> _Rectangle_ -> _Square_
+
+== Polymorphism
+* Ability to change types of an object using its parent-child relationship
+[source,java]
+----
+Square sq = new Square();
+Rectange rect = (Rectange) sq;
+----
+
+== Generics
+
+== Comparators

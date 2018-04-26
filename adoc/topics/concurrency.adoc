@@ -1,0 +1,20 @@
+= Concurrency
+
+== What is Concurrency
+* https://en.wikipedia.org/wiki/Concurrent_computing
+* Several computations executed during overlapping times or at the same time
+* Can also be referred to as parallel computing.
+
+== What Problems are Good Fit for Concurrency
+https://en.wikipedia.org/wiki/Embarrassingly_parallel
+* Non-blocking operations
+* Static file serving
+* Lots of simulations
+
+== Example
+[source,javascript]
+----
+app.use('/sayHello', (req, res) => {
+  res.send({content: `hi!'}`});
+});
+----

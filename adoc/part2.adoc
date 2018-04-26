@@ -16,21 +16,14 @@ include::topics/interpreted-compiled-languages-comparison.adoc[leveloffset=+2]
 
 == Functional Languages
 
-include::topics/lambdas.adoc[leveloffset=+2]
 include::topics/scheme-about.adoc[leveloffset=+2]
 include::topics/scheme-typing.adoc[leveloffset=+2]
 include::topics/scheme-assignments-flow-control.adoc[leveloffset=+2]
+include::topics/lambdas.adoc[leveloffset=+2]
+include::topics/functional-languages-tradeoffs.adoc[leveloffset=+2]
 
-
-
-=== Pros and cons
-* where do functional languages shine?
-* where do that struggle?
-* functional language concepts in declarative languages
 
 == Object Oriented Languages
-* Inheritance
-* Polymorphism
-* Generics
-* The diamond problem
-* Comparators
+
+include::topics/object-oriented-concepts.adoc[leveloffset=+2]
+include::topics/java-oo-concepts.adoc[leveloffset=+2]
