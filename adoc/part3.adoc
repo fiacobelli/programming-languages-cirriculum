@@ -1,14 +1,7 @@
 = Part3 - Problem Solving
 
-== CRUD
-* connecting to the database
-* connection pools
-* mapping language types to database types
-* persistence frameworks
+include::topics/crud.adoc[leveloffset=+1]
 
-=== Transactions
-* What are they?
-* rollback
 
 
 == Concurrency

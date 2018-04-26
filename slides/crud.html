@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>CRUD</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/black.css" id="theme"><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css";
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>CRUD</h1></section><section id="what_is_crud"><h2>What is CRUD?</h2><div class="ulist"><ul><li><p><em>Create</em>, <em>Read</em>, <em>Update</em>, and <em>Delete</em> operations in a database.</p></li><li><p>Programming Languages must handle:</p><div class="ulist"><ul><li><p>Connecting to a database and maintaining connection pools</p></li><li><p>Mapping database types to language types</p></li><li><p>Ensuring persistence</p></li><li><p>Handling transactions</p></li></ul></div></li></ul></div></section>
+<section><section id="transactions"><h2>Transactions</h2><div class="ulist"><ul><li><p>Transactions are a set of database operations that are handled as a single operation.</p></li><li><p>If one of the operations in the transaction fails, all operations in the transaction are undone or <em>rolled back</em>.</p></li></ul></div></section><section id="transaction_exmample"><h2>Transaction Exmample</h2><div class="ulist"><ul><li><p>A <em>Reservation</em> is represented across three tables: <code>flight</code>, <code>hotel</code>, <code>car_rental</code>.</p></li><li><p>When creating or updating a <em>Reservation</em>, operations on all 3 tables are required and handled as a transaction.</p></li><li><p>Assume an existing reservation&#8217;s dates are moved 2 days forwards:</p><div class="ulist"><ul><li><p>Transaction is started</p></li><li><p>Entry in <code>flight</code> table is updated and succeeds</p></li><li><p>Entry in <code>hotel</code> table is updated and succeeds</p></li><li><p>Entry in <code>car_rental</code> table fails</p></li><li><p>Previous 2 updates are undone</p></li><li><p>Transaction is aborted</p></li></ul></div></li></ul></div></section></section>
+<section><section id="how_different_languages_handle_crud"><h2>How Different Languages Handle CRUD</h2></section><section id="java"><h2>Java</h2><div class="ulist"><ul><li><p><a href="https://en.wikipedia.org/wiki/Java_Database_Connectivity">JDBC</a></p><div class="ulist"><ul><li><p>Handles connections, pools, persistence, and transactions.</p></li><li><p>Usually offered by EE containers</p></li></ul></div></li><li><p><a href="https://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a></p><div class="ulist"><ul><li><p>Works with JDBC to map database tables to Java objects</p></li><li><p><a href="http://hibernate.org">Hibernate</a>, <a href="http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html">JPA</a></p></li></ul></div></li></ul></div></section><section id="using_hibernate"><h2>Using Hibernate</h2><div class="ulist"><ul><li><p>Java project is configured to use hibernate via XML.</p></li><li><p>Connection to the database is configured via XML.</p></li><li><p>Java classes are mapped to database tables</p></li><li><p>Data is persisted using Hibernate API.</p></li></ul></div></section><section id="hibernate_annotated_class"><h2>Hibernate Annotated Class</h2><div class="paragraph"><p><a href="http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-annotations-entity" class="bare">http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-annotations-entity</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity
+@Table( name = "EVENTS" )
+public class Event {
+
+  @Id
+  @GeneratedValue(generator="increment")
+  @GenericGenerator(name="increment", strategy = "increment")
+  public Long getId() {
+      return id;
+  }
+
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name = "EVENT_DATE")
+  public Date getDate() {
+    return date;
+  }
+}</code></pre></div></div></section><section id="hibernate_persistence_example"><h2>Hibernate Persistence Example</h2><div class="paragraph"><p><a href="http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-basic-test" class="bare">http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-basic-test</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">Session session = sessionFactory.openSession();
+session.beginTransaction();
+session.save( new Event( "Our very first event!", new Date() ) );
+session.save( new Event( "A follow up event", new Date() ) );
+session.getTransaction().commit();
+session.close();</code></pre></div></div></section><section id="hibernate_search_example"><h2>Hibernate Search Example</h2><div class="paragraph"><p><a href="http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-basic-test" class="bare">http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-basic-test</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">session = sessionFactory.openSession();
+session.beginTransaction();
+List result = session.createQuery( "from Event" ).list();
+for ( Event event : (List&lt;Event&gt;) result ) {
+    System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() );
+}
+session.getTransaction().commit();
+session.close();</code></pre></div></div></section><section id="python"><h2>Python</h2><div class="ulist"><ul><li><p>Python offers <a href="http://docs.sqlalchemy.org/en/latest/orm/tutorial.html">ORMs</a> as well as <a href="https://docs.python.org/3/library/persistence.html">persistence libraries</a> and <a href="https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html">direct interfaces for running queries</a>.</p></li></ul></div></section><section id="python_connecting_to_a_database"><h2>Python - Connecting to a Database</h2><div class="paragraph"><p><a href="https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html" class="bare">https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="python language-python">from mysql.connector import (connection)
+
+cnx = connection.MySQLConnection(user='scott', password='password',
+                                 host='127.0.0.1',
+                                 database='employees')
+cnx.close()</code></pre></div></div></section><section id="python_inserting_data"><h2>Python - Inserting Data</h2><div class="paragraph"><p><a href="https://dev.mysql.com/doc/connector-python/en/connector-python-example-cursor-transaction.html" class="bare">https://dev.mysql.com/doc/connector-python/en/connector-python-example-cursor-transaction.html</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="python language-python">from __future__ import print_function
+from datetime import date, datetime, timedelta
+import mysql.connector
+
+cnx = mysql.connector.connect(user='scott', database='employees')
+cursor = cnx.cursor()
+
+tomorrow = datetime.now().date() + timedelta(days=1)
+
+add_employee = ("INSERT INTO employees "
+               "(first_name, last_name, hire_date, gender, birth_date) "
+               "VALUES (%s, %s, %s, %s, %s)")
+add_salary = ("INSERT INTO salaries "
+              "(emp_no, salary, from_date, to_date) "
+              "VALUES (%(emp_no)s, %(salary)s, %(from_date)s, %(to_date)s)")
+
+data_employee = ('Geert', 'Vanderkelen', tomorrow, 'M', date(1977, 6, 14))
+
+# Insert new employee
+cursor.execute(add_employee, data_employee)
+emp_no = cursor.lastrowid
+
+# Insert salary information
+data_salary = {
+  'emp_no': emp_no,
+  'salary': 50000,
+  'from_date': tomorrow,
+  'to_date': date(9999, 1, 1),
+}
+cursor.execute(add_salary, data_salary)
+
+# Make sure data is committed to the database
+cnx.commit()
+
+cursor.close()
+cnx.close()</code></pre></div></div></section><section id="python_searching_data"><h2>Python - Searching Data</h2><div class="paragraph"><p><a href="https://dev.mysql.com/doc/connector-python/en/connector-python-example-cursor-select.html" class="bare">https://dev.mysql.com/doc/connector-python/en/connector-python-example-cursor-select.html</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="python language-python">import datetime
+import mysql.connector
+
+cnx = mysql.connector.connect(user='scott', database='employees')
+cursor = cnx.cursor()
+
+query = ("SELECT first_name, last_name, hire_date FROM employees "
+         "WHERE hire_date BETWEEN %s AND %s")
+
+hire_start = datetime.date(1999, 1, 1)
+hire_end = datetime.date(1999, 12, 31)
+
+cursor.execute(query, (hire_start, hire_end))
+
+for (first_name, last_name, hire_date) in cursor:
+  print("{}, {} was hired on {:%d %b %Y}".format(
+    last_name, first_name, hire_date))
+
+cursor.close()
+cnx.close()</code></pre></div></div></section><section id="ruby"><h2>Ruby</h2><div class="ulist"><ul><li><p>Ruby has <a href="https://deveiate.org/code/pg/">libraries</a> for connecting to a database.</p></li><li><p>Ruby on Rails provides <a href="http://guides.rubyonrails.org/active_record_basics.html">Active Record</a> as an ORM.</p></li></ul></div></section><section id="ruby_active_record"><h2>Ruby - Active Record</h2><div class="ulist"><ul><li><p>Classes are automatically mapped to tables and columns in a database</p></li><li><p>Objects are persisted using methods.</p></li></ul></div></section><section id="ruby_crud_operations"><h2>Ruby - CRUD Operations</h2><div class="paragraph"><p><a href="http://guides.rubyonrails.org/active_record_basics.html#crud-reading-and-writing-data" class="bare">http://guides.rubyonrails.org/active_record_basics.html#crud-reading-and-writing-data</a></p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="ruby language-ruby">user = User.create(name: "David", occupation: "Code Artist")
+
+david = User.find_by(name: 'David')
+david.name = 'Dave'
+david.save
+
+user = User.find_by(name: 'David')
+user.destroy</code></pre></div></div></section></section></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Set a per-slide timing for speaker notes, null means none
+  defaultTiming: null,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Randomizes the order of slides each time the presentation loads
+  shuffle: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Flags if we should show a help overlay when the questionmark
+  // key is pressed
+  help: true,
+  // Flags if speaker notes should be visible to all viewers
+  showNotes: false,
+  // Global override for autolaying embedded media (video/audio/iframe)
+  // - null: Media will only autoplay if data-autoplay is present
+  // - true: All media will autoplay, regardless of individual setting
+  // - false: No media will autoplay, regardless of individual setting
+  autoPlayMedia: null,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'black',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true }
+  ]
+});</script></body></html>

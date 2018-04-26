@@ -1,0 +1,200 @@
+= CRUD
+
+== What is CRUD?
+* _Create_, _Read_, _Update_, and _Delete_ operations in a database.
+* Programming Languages must handle:
+** Connecting to a database and maintaining connection pools
+** Mapping database types to language types
+** Ensuring persistence
+** Handling transactions
+
+== Transactions
+* Transactions are a set of database operations that are handled as a single operation.
+* If one of the operations in the transaction fails, all operations in the transaction are undone or _rolled back_.
+
+=== Transaction Exmample
+* A _Reservation_ is represented across three tables: `flight`, `hotel`, `car_rental`.
+* When creating or updating a _Reservation_, operations on all 3 tables are required and handled as a transaction.
+* Assume an existing reservation's dates are moved 2 days forwards:
+** Transaction is started
+** Entry in `flight` table is updated and succeeds
+** Entry in `hotel` table is updated and succeeds
+** Entry in `car_rental` table fails
+** Previous 2 updates are undone
+** Transaction is aborted
+
+== How Different Languages Handle CRUD
+
+=== Java
+* link:https://en.wikipedia.org/wiki/Java_Database_Connectivity[JDBC]
+** Handles connections, pools, persistence, and transactions.
+** Usually offered by EE containers
+* link:https://en.wikipedia.org/wiki/Object-relational_mapping[ORM]
+** Works with JDBC to map database tables to Java objects
+** link:http://hibernate.org[Hibernate], link:http://www.oracle.com/technetwork/articles/javaee/jpa-137156.html[JPA]
+
+=== Using Hibernate
+* Java project is configured to use hibernate via XML.
+* Connection to the database is configured via XML.
+* Java classes are mapped to database tables
+* Data is persisted using Hibernate API.
+
+=== Hibernate Annotated Class
+http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-annotations-entity
+
+[source,java]
+----
+@Entity
+@Table( name = "EVENTS" )
+public class Event {
+
+  @Id
+  @GeneratedValue(generator="increment")
+  @GenericGenerator(name="increment", strategy = "increment")
+  public Long getId() {
+      return id;
+  }
+
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name = "EVENT_DATE")
+  public Date getDate() {
+    return date;
+  }
+}
+----
+
+=== Hibernate Persistence Example
+http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-basic-test
+
+[source,java]
+----
+Session session = sessionFactory.openSession();
+session.beginTransaction();
+session.save( new Event( "Our very first event!", new Date() ) );
+session.save( new Event( "A follow up event", new Date() ) );
+session.getTransaction().commit();
+session.close();
+----
+
+=== Hibernate Search Example
+http://docs.jboss.org/hibernate/orm/5.2/quickstart/html_single/#hibernate-gsg-tutorial-basic-test
+
+[source,java]
+----
+session = sessionFactory.openSession();
+session.beginTransaction();
+List result = session.createQuery( "from Event" ).list();
+for ( Event event : (List<Event>) result ) {
+    System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() );
+}
+session.getTransaction().commit();
+session.close();
+----
+
+
+=== Python
+* Python offers link:http://docs.sqlalchemy.org/en/latest/orm/tutorial.html[ORMs] as well as link:https://docs.python.org/3/library/persistence.html[persistence libraries] and link:https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html[direct interfaces for running queries].
+
+=== Python - Connecting to a Database
+https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html
+
+[source,python]
+----
+from mysql.connector import (connection)
+
+cnx = connection.MySQLConnection(user='scott', password='password',
+                                 host='127.0.0.1',
+                                 database='employees')
+cnx.close()
+----
+
+=== Python - Inserting Data
+https://dev.mysql.com/doc/connector-python/en/connector-python-example-cursor-transaction.html
+
+[source,python]
+----
+from __future__ import print_function
+from datetime import date, datetime, timedelta
+import mysql.connector
+
+cnx = mysql.connector.connect(user='scott', database='employees')
+cursor = cnx.cursor()
+
+tomorrow = datetime.now().date() + timedelta(days=1)
+
+add_employee = ("INSERT INTO employees "
+               "(first_name, last_name, hire_date, gender, birth_date) "
+               "VALUES (%s, %s, %s, %s, %s)")
+add_salary = ("INSERT INTO salaries "
+              "(emp_no, salary, from_date, to_date) "
+              "VALUES (%(emp_no)s, %(salary)s, %(from_date)s, %(to_date)s)")
+
+data_employee = ('Geert', 'Vanderkelen', tomorrow, 'M', date(1977, 6, 14))
+
+# Insert new employee
+cursor.execute(add_employee, data_employee)
+emp_no = cursor.lastrowid
+
+# Insert salary information
+data_salary = {
+  'emp_no': emp_no,
+  'salary': 50000,
+  'from_date': tomorrow,
+  'to_date': date(9999, 1, 1),
+}
+cursor.execute(add_salary, data_salary)
+
+# Make sure data is committed to the database
+cnx.commit()
+
+cursor.close()
+cnx.close()
+----
+
+=== Python - Searching Data
+https://dev.mysql.com/doc/connector-python/en/connector-python-example-cursor-select.html
+[source,python]
+----
+import datetime
+import mysql.connector
+
+cnx = mysql.connector.connect(user='scott', database='employees')
+cursor = cnx.cursor()
+
+query = ("SELECT first_name, last_name, hire_date FROM employees "
+         "WHERE hire_date BETWEEN %s AND %s")
+
+hire_start = datetime.date(1999, 1, 1)
+hire_end = datetime.date(1999, 12, 31)
+
+cursor.execute(query, (hire_start, hire_end))
+
+for (first_name, last_name, hire_date) in cursor:
+  print("{}, {} was hired on {:%d %b %Y}".format(
+    last_name, first_name, hire_date))
+
+cursor.close()
+cnx.close()
+----
+
+=== Ruby
+* Ruby has link:https://deveiate.org/code/pg/[libraries] for connecting to a database.
+* Ruby on Rails provides link:http://guides.rubyonrails.org/active_record_basics.html[Active Record] as an ORM.
+
+=== Ruby - Active Record
+* Classes are automatically mapped to tables and columns in a database
+* Objects are persisted using methods.
+
+=== Ruby - CRUD Operations
+http://guides.rubyonrails.org/active_record_basics.html#crud-reading-and-writing-data
+[source,ruby]
+----
+user = User.create(name: "David", occupation: "Code Artist")
+
+david = User.find_by(name: 'David')
+david.name = 'Dave'
+david.save
+
+user = User.find_by(name: 'David')
+user.destroy
+----
