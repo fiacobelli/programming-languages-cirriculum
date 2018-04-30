@@ -1,0 +1,18 @@
+= Homework 4
+
+This assignment reads from `homework4-ops.txt`.
+
+To run the java example:
+
+[source,bash]
+----
+$ javac homework4.java
+$ java homework4
+----
+
+To run the javascript example:
+
+[source, bash]
+----
+$ node homework4.js
+----

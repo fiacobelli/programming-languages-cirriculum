@@ -1,9 +1,104 @@
 = Homework 3
+:examplePath: https://raw.githubusercontent.com/rhoads-zach/programming-languages-cirriculum/master/examples/
 
-Create an application that exposes a RESTful service that handles the four basic math operations (`+`,`-`,`*`,`/`) on two numbers.
+Download, install, and configure the below languages to run on your computer. You can install these directly on your operating system, create VMs using something like link:https://www.virtualbox.org[VirtualBox], or even use link:https://www.docker.com[Docker] containers.
 
-You must implement this application twice:
-* With a Statically typed language
-* With a Dynamically typed language
+You must submit a completed `homework3.txt` file to prove everything is installed and configured properly.
 
-Create each application in a different Github repo and send in the link to each. Each repo should also contain a `README.md` file that explains how to install, run and interact with the application. This file should be formatted using markdown.
+== Java
+. Ensure link:https://www.java.com/en/[Java is installed].
++
+You can can check if Java is already installed by running:
++
+[source,bash]
+----
+$ java -version
+----
+. Download link:{examplePath}/homework3.java[homework3.java]
+. Run the follow two commands:
+[source,bash]
+----
+$ java -version
+$ javac homework3.java
+$ java homework3
+----
+. Copy/Paste the input and output from the above command into a file called `homework3.txt`.
+
+
+== Python
+
+. Ensure link:https://www.python.org/downloads/[Python is installed].
++
+You can can check if Ruby is already installed by running:
++
+[source,bash]
+----
+$ python --version
+----
+. Download link:{examplePath}/homework3.py[homework3.py]
+. Run the follow two commands:
+[source,bash]
+----
+$ python --version
+$ python homework3.py
+----
+. Copy/Paste the input and output from the above command into a file called `homework3.txt`.
+
+
+
+== Node.js
+
+. Ensure link:https://nodejs.org/en/[Node.js is installed].
++
+You can can check if Ruby is already installed by running:
++
+[source,bash]
+----
+$ node --version
+----
+. Download link:{examplePath}/homework3.js[homework3.js]
+. Run the follow two commands:
+[source,bash]
+----
+$ node --version
+$ node ...
+----
+. Copy/Paste the input and output from the above command into a file called `homework3.txt`.
+
+
+
+
+== Ruby
+
+. Ensure link:https://www.ruby-lang.org/en/downloads/[Ruby is installed].
++
+You can can check if Ruby is already installed by running:
++
+[source,bash]
+----
+$ ruby --verison
+----
+. Download link:{examplePath}/homework3.rb[homework3.rb]
+. Run the follow two commands:
+[source,bash]
+----
+$ ruby --version
+$ run ....
+----
+. Copy/Paste the input and output from the above command into a file called `homework3.txt`.
+
+== Racket
+. Ensure link:http://racket-lang.org[Racket is installed].
+. Download link:{examplePath}/homework3.rkt[homework3.rkt]
+. Open the _Dr Racket_ application.
+. Open _homework3.rkt_.
+. Click _Run_ in the upper right corner.
+. In the bottom window, run:
+[source,bash]
+----
+> (homework3)
+----
+. Copy/Paste the input and output from the above command into a file called `homework3.txt`.
+
+
+current time in millis times prime number

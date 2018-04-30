@@ -1,0 +1,30 @@
+Java:
+$ java -version
+java version "1.8.0_144"
+Java(TM) SE Runtime Environment (build 1.8.0_144-b01)
+Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
+$ javac homework3.java
+$ java homework3
+My number is: 12076093978471174
+
+Python:
+$ python --version
+Python 2.7.10
+$ python homework3.py
+My number is: 12076107970188
+
+Node.js:
+$ python --version
+Python 2.7.10
+$ node homework3.js
+My number is: 12076110349467388
+
+Ruby:
+$ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [universal.x86_64-darwin17]
+$ ruby homework3.rb
+My number is: 12076115580347
+
+Racket:
+> (homework3)
+'("My number is: " . 12076127831040)

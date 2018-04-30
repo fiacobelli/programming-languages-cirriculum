@@ -1,6 +1,11 @@
 = Final Project
 
-Implement _one_ of the following:
+Implement _one_ of the below options. In addition, your submission should include a brief write up explaining:
+
+* Why did you choose the languages for solving the problem?
+* What are the tradeoffs for your language choice?
+* What other languages did you consider and why did you decide against them?
+
 
 == Option 1: 2 Approaches to Database Applications
 Create an application for managing an inventory of fruit and placing orders against the inventory.

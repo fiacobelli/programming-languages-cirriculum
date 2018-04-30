@@ -1,9 +1,13 @@
 = Homework 4
 
-Create an HTML front end for each of your applications you submitted for link:homework3.html[Homework 3].
+Create an application that handles the four basic math operations (`+`,`-`,`*`,`/`) on two positive integers.
+The program must:
+. Read the contents of a file (e.g. https://raw.githubusercontent.com/rhoads-zach/programming-languages-cirriculum/master/examples/homework4-ops.txt).
+. Process each line as an individual operation (e.g. `1 + 2`).
+. Print the result the the console in the format `OPERATION = ANSWER` (e.g. `1 + 2 = 3`).
 
-Each HTML front end should provide a form to interact with your RESTful service.
+You must implement this application twice:
+* With a Statically typed language
+* With a Dynamically typed language
 
-One front end should use a POST/REDIRECT approach that displays a result page.
-
-The other front end should use a javascript-based reactive page for interacting with the application and displaying the results.
+Submit each application's source file with a README explaining how to run the application with `homework4-ops.txt`.
