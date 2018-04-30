@@ -1,0 +1,17 @@
+= Homework 5 Node.js App
+
+To run:
+[source,bash]
+----
+$ npm install
+$ node index.js
+----
+
+To interact, use the following urls:
+
+* http://localhost:3000/add?lhs=1&rhs=2
+* http://localhost:3000/subtract?lhs=1&rhs=2
+* http://localhost:3000/multiply?lhs=1&rhs=2
+* http://localhost:3000/divide?lhs=1&rhs=2
+
+You can change the values by changing the `lhs` and `rhs` query parameters.

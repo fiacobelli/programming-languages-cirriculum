@@ -1,0 +1,17 @@
+= Sample Java App
+Borrowed from here: https://projects.spring.io/spring-boot/#quick-start
+
+To run:
+[source,bash]
+----
+$ mvn clean spring-boot:run
+----
+
+To interact, use the following urls:
+
+* http://localhost:8080/add?lhs=1&rhs=2
+* http://localhost:8080/subtract?lhs=1&rhs=2
+* http://localhost:8080/multiply?lhs=1&rhs=2
+* http://localhost:8080/divide?lhs=1&rhs=2
+
+You can change the values by changing the `lhs` and `rhs` query parameters.
