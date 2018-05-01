@@ -1,9 +1,7 @@
-= Homework 5
+= Homework 6
 
-Create an HTML front end for each of your applications you submitted for link:homework5.html[Homework 5].
+Create an HTML front end to interact with each of your applications you submitted for link:homework5.html[Homework 5].
 
-Each HTML front end should provide a form to interact with your RESTful service.
+The HTML front end should provide a form to interact with your RESTful service.
 
-One front end should use a POST/REDIRECT approach that displays a result page.
-
-The other front end should use a javascript-based reactive page for interacting with the application and displaying the results.
+It should use a javascript-based reactive page for interacting with the application and displaying the results.

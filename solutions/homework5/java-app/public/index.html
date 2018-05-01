@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(() => {
+        
+        $('#add').click( function() {
+          var url = "/add?lhs="+$('#lhs').val()+"&rhs="+$('#rhs').val();
+          $.getJSON(url, function (res) {
+            $('#answer').text(res.answer);
+          });
+        });
+
+        $('#subtract').click( function() {
+          var url = "/subtract?lhs="+$('#lhs').val()+"&rhs="+$('#rhs').val();
+          $.getJSON(url, function (res) {
+            $('#answer').text(res.answer);
+          });
+        });
+
+        $('#multiply').click( function() {
+          var url = "/multiply?lhs="+$('#lhs').val()+"&rhs="+$('#rhs').val();
+          $.getJSON(url, function (res) {
+            $('#answer').text(res.answer);
+          });
+        });
+
+        $('#divide').click( function() {
+          var url = "/divide?lhs="+$('#lhs').val()+"&rhs="+$('#rhs').val();
+          $.getJSON(url, function (res) {
+            $('#answer').text(res.answer);
+          });
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <h1>Horkwork 6</h1>
+    <div>
+      <label>LHS</label><input type="text" size="5" id="lhs"></text>
+      <label>RHS</label><input type="text" size="5" id="rhs"></text>
+      <button id="add">add</button>
+      <button id="subtract">subtract</button>
+      <button id="multiply">multiply</button>
+      <button id="divide">divide</button>
+    </div>
+    <p>Answer: <span id="answer">????</span></p>
+
+  </body>
+
+</html>
