@@ -1,0 +1,72 @@
+= Homework 2
+
+== Syntax
+
+.Grammar _G_
+[source]
+----
+<program>    -> begin <stmt_list> end
+<stmt_list>  -> <stmt>
+              | <stmt> ; <stmt_list>
+<stmt>       -> <var> = <expression>
+<var>        -> A|B|C
+<expression> -> <var> + <var>
+              | <var> – <var>
+              | <var>
+----
+
+. Read chapter 3.1 - 3.3
+. Using Grammar _G_, do this derivation.
++
+[source]
+----
+<program> => begin <stmt_list> end
+          => begin <stmt>;<stmt_list> end
+          => begin <var> = <expression>;<stmt_list> end
+          => begin B = <expression> ; <stmt_list> end
+          => begin B = <var> ; <stmt_list> end
+          => begin B = C ; <stmt_list> end
+          => begin B = C ; <stmt> end
+          => begin B = C ; <var> = <expression> end
+          => begin B = C ; A = <expression> end
+          => begin B = C ; A = <var> + <var> end
+          => begin B = C ; A = B + <var> end
+          => begin B = C ; A = B + C end
+----
+
+. Using Grammar _G_, do this derivation.
++
+[source]
+----
+<program> => begin <stmt_list> end
+          => begin <stmt>;<stmt_list> end
+          => begin <var> = <expression>;<stmt_list> end
+          => begin A = <expression>;<stmt_list> end
+          => begin A = <var> + <var> - <var>;<stmt_list> end
+          => begin A = B + <var> - <var>;<stmt_list> end
+          => begin A = B + C - <var>;<stmt_list> end
+          => begin A = B + C - D ;<stmt_list> end
+          => begin A = B + C - D ;<stmt> end
+          => begin A = B + C - D ; <var> = <expression> end
+          => begin A = B + C - D ; B = <expression> end
+          => begin A = B + C - D ; B = <var> + <var> end
+          => begin A = B + C - D ; B = C + <var> end
+          => begin A = B + C - D ; B = C + E end
+          => begin A = B + C - D ; B = C + E end
+----
+
+. Using Grammar _G_, do this derivation.
++
+[source]
+----
+<program> => begin <stmt_list> end
+          => begin <stmt>;<stmt_list> end
+          => begin <var> = <expression>;<stmt_list> end
+          => begin A = <expression>;<stmt_list> end
+          => begin A = <var> - ;<stmt_list> end
+
+          
+          => begin A = D - 5; B = B + C - A + D; end
+----
+
+. Create parse trees for the above three derivations.

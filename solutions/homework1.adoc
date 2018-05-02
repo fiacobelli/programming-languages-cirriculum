@@ -1,0 +1,126 @@
+= Homework 1
+
+== What is and isn't a Programming Language
+. Are regular expressions a programming language?
+====
+Regular Expressions define search patterns and are formal grammar, but are not a programming language. While it has some elements such literals, symbols, and concatenation operations, it is not Turing Complete.
+
+** https://en.wikipedia.org/wiki/Regular_expression
+** https://softwareengineering.stackexchange.com/questions/165740/are-regular-expressions-a-programming-language#165744
+** https://en.wikipedia.org/wiki/Turing_machine
+====
+
+. Are domain-specific languages programming languages?
+====
+It dependends on the language since this is a broad category of languages. For example, Markdown is a DSL, but it is not a programming language. But, Perl was initially designed as a DSL for string processing, but can be used as a general purpose language and is a programming language.
+
+** https://en.wikipedia.org/wiki/Domain-specific_language
+====
+
+== Computational model
+. What would 2 computational models be for doing squaring (e.g 5^2^)?
+====
+.Option 1
+Values:: Integers (INT)
+Operations:: `INT ^ 2`
+
+.Example Usage
+[source]
+----
+1 ^ 2
+2 ^ 2
+----
+
+.Option 2
+Values:: Integers (INT)
+Operations:: `SQUARE[INT]`
+
+.Example Usage
+[source]
+----
+SQUARE[1]
+SQUARE[2]
+----
+====
+
+. What would 2 computational models be for doing general exponents (e.g. 3^4^)?
+====
+.Option 1
+Values:: Integers (INT), Natural Numbers (NAT)
+Operations:: `INT ^ NAT`
+
+.Example Usage
+[source]
+----
+2 ^ 4
+3 ^ 2
+----
+
+.Option 2
+Values:: Integers (INT), Natural Numbers (NAT)
+Operations:: `POW[INT,NAT]`
+
+.Example Usage
+[source]
+----
+POW[2,4]
+POW[3,2]
+----
+====
+
+== Algorithms
+. Give an example algorithm for link:https://en.wikipedia.org/wiki/Summation[Summation] of `i` from `1` to `n`.
+====
+[source]
+----
+integer summation(n)
+{
+  integer sum = 0
+  for each integer i from n to 1
+      sum = sum + i
+
+  return sum
+}
+----
+====
+
+. Give an example algorithm for link:https://en.wikipedia.org/wiki/Bubble_sort[Bubble sort]
+====
+[source]
+----
+bubbleSort(integer[] nums)
+{
+  boolean swapped = true
+
+  while(!swapped)
+    swapped = false
+    for each integer i from 0 to nums.length - 1
+      if nums[i] > nums[i+1]
+        integer temp = nums[i+1]
+        nums[i+1] = nums[i]
+        nums[i] = temp
+        swapped = true
+}
+----
+====
+
+. Give an example algorithm for link:https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm[KMP search]
+[source]
+----
+integer kmp-search(char[] word, char[] textString)
+{
+  integer result = -1
+  integer cursor = 0
+
+  while (cursor <= textString - 1)
+    for each integer i from 0 to word.length - 1
+      if word[i] != textString[cursor+1]
+        cursor = cursor + i + 1
+        break
+      else if i == word.length - 1
+        return cursor
+
+  return -1  
+}
+----
+====
