@@ -47,7 +47,7 @@
 ** Distributed systems and Microservices
 ** message passing
 ** Message queues
-** transactions
+** Transactions
 
 == Materials
 * link:syllabus.html[Syllabus]
@@ -95,5 +95,5 @@
 * link:homework4.html[Homework 4]
 * Lecture: link:{slides-base-url}crud.html[CRUD]
 * Lecture: link:{slides-base-url}concurrency.html[Concurrency]
-* Lecture: link:{slides-base-url}events.html[Events] 
+* Lecture: link:{slides-base-url}events.html[Events]
 * link:final.html[Final Project]

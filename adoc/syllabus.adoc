@@ -1,1 +1,113 @@
 = Syllabus
+
+Course Prefix & Number: Programming Languages
+
+College of Arts & Sciences Syllabus
+
+== Course Information
+
+* Credit Hours:  ##
+* Course Description: This course provides an introduction to the fundamental concepts of programming languages their structural definition and run time implementation. It equips the students with the tools necessary for the critical evaluation of existing programming languages, and the learning of new ones. In addition, it prepares students to apply programming languages concepts in solving modern computing problems.
+
+* Course Prerequisites:
+
+== Faculty Information
+
+Instructor::		Key or paste your name here.
+Office Location::	Key or paste information here.
+Office Hours::		Key or paste information here.
+Phone Extension::	Key or paste information here.
+E-mail::		Key or paste information here.
+
+== Course Materials
+
+link:https://www.pearson.com/us/higher-education/program/Sebesta-Concepts-of-Programming-Languages-11th-Edition/PGM270801.html[Concepts of Programming Languages - Sebesta]
+
+
+== MAJOR COURSE TOPICS
+
+. Concepts of Programming Languages
++
+Syntax, Semantics, Datatypes, Expressions and Assignments, Control Structures
+
+. Basics in Action
++
+Declarative/imperative Languages, Functional Languages, Object Oriented Languages
+
+. Problem Solving
++
+Database interaction, Concurrency, Events, Distributed Systems and Microservices
+
+== Course Objectives / Student Learning Outcomes
+== Course Goals
+* Learn the base concepts in core to programming language design.
+* Understand how to implement or use those base concepts in various languages.
+* Using concepts in programming languages to solve practical problems.
+
+=== Course Outcomes
+* Have working knowledge of programming language topics.
+* Understand how different choices in programming language design impact problem solving in that language.
+* Gain exposure to modern software development problems.
+* Ability to make informed decisions when choosing a language to solve a problem.
+
+
+== Student Tasks / Assignments / Requirements
+
+=== Assignments:
+* 6 Homework assignments, 4 of which are programming assignments
+* Several quizzes throughout the semester
+* A final project that involves programming as well as analysis.
+
+
+=== Grading Policies and Formulae:
+Must include a breakdown of the total course grade by task/assignment and a specific grading scale with letter grade.
+
+=== Course Outline:
+
+. Part1 - Concepts
+** What is and is not a programming language.
+** Computational Models
+** Algorithms
+** Syntax and Semantics
+** Naming, Binding and Scope
+** Datatypes
+** Expressions and Assignments
+** Control structures
+** Subprograms
+** Abstraction and Encapsulation
+** Approaches in Languages
+. Part2 - Basics in action
+** Declarative/imperative Languages
+*** Assignments and flow Control
+*** Typing
+*** Functions
+*** interpreted and compiled
+** Functional Languages
+*** lambdas
+*** Blocks
+*** passing functions
+** Object Oriented Languages
+*** Inheritance
+*** Polymorphism
+. Part3 - Lets solve some problems!
+** CRUD
+** Concurrency
+** Events
+** Distributed systems and Microservices
+** message passing
+** Message queues
+** Transactions
+
+== Course Policies and Statements
+
+=== Absence Policy
+Outline your attendance requirements or lack thereof and the associated repercussions (e.g., “Attendance is mandatory; each unexcused absence results in a loss of 10 points”; “Attendance is required but not noted; be aware that class participation points cannot be earned or made up if you are not present in class”).
+
+=== Academic Integrity Policy
+By enrolling in this course, you are bound by the NEIU Student Code of Conduct: http://www.neiu.edu/university-life/student-rights-and-responsibilities/student-code-conduct. You will be informed by your instructor of any additional policy specific to your course regarding plagiarism, class disruptions, etc.
+
+=== ADA Statement
+Northeastern Illinois University (NEIU) complies with the Americans with Disabilities Act (ADA) in making reasonable accommodations for qualified students with disabilities. To request accommodations, students with special needs should make arrangements with the Student Disability Services (SDS) office, located on the main campus in room D104. Contact SDS via (773) 442-4595 or http://www.neiu.edu/university-life/student-disability-services.
+
+=== Campus Safety
+Web links to Campus Safety: Emergency Procedures and Safety Information can be found on NEIUport on the MyNEIU tab or as follows: http://homepages.neiu.edu/~neiutemp/Emergency_Procedures/MainCampus/.
