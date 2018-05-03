@@ -5,6 +5,8 @@ Source: Chapter 5 ^link:https://github.com/rhoads-zach/programming-languages-cir
 * Name is a a string of characters used to identify an entity in a program.
 * start with a letter
 * followed by letters, numbers, and underscores
+
+== Name Forms
 * additional conventions
 ** PHP: variables start with `$`
 ** Perl: variables start with symbol denoting their type, e.g. `$`, `@`, `%`
@@ -162,6 +164,8 @@ y = z;
 * Dynamic typing gives you more flexibility when writing code.
 ** Any variable can be assigned and reassigned to any type.
 ** You can also account for handling input that is not typed by the language.
+
+=== Static vs. Dynamic Typing
 * Static typing is more reliable, since typing issues can be found at compile time.
 * Dynamic typing also has a huge cause of doing type checking during runtime.
 ** This usually restricts dynamically typed languages to interpreters.
@@ -175,6 +179,8 @@ y = z;
 * Scope determines the visibility, or what statements can reference, a variable.
 * local variables are declared and used in the same program unit or block
 * non-local variables are used in different program unit or block than they are declared
+
+=== Scope
 * Static scoping allows a variable's scope to be determined statically, before execution.
 * Dynamic scoping determines a variables scope during execution.
 

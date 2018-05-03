@@ -1,20 +1,25 @@
 = Expressions and Assignments
 
-* math
-** order of operations
-** paranthesis
-* condintionals
-* side-effects
-* operator overload
-* type conversions
 
-* relational expressions
-** boolean
+== math
+=== order of operations
+=== paranthesis
 
-* assignments
-** simple expressions
-** condintionals
-** compounds
-** unary
-** as expressions
-** multiple Assignments
+
+== condintionals
+== side-effects
+== operator overload
+== type conversions
+
+
+== relational expressions
+=== boolean
+
+
+== assignments
+=== simple expressions
+=== condintionals
+=== compounds
+=== unary
+=== as expressions
+=== multiple Assignments

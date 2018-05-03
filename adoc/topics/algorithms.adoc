@@ -1,11 +1,13 @@
 = Algorithms
 
-https://en.wikipedia.org/wiki/Algorithm
+== About Algorithms
 
 * Method for solving a problem
 * Often implemented by a program, but does not have to be
 * An algorithm can be defined at a high-level, absent of a programming language
 ** This is sometimes called pseudocode
+
+https://en.wikipedia.org/wiki/Algorithm
 
 == Example Algorithms
 
@@ -18,6 +20,7 @@ https://en.wikipedia.org/wiki/Factorial
 
 The factorial of `n` is the product of all positive integers from 1 to `n`. `!` is used to denote factorial.
 
+=== Factorial
 .Example
 [source]
 ----
@@ -31,6 +34,7 @@ The factorial of `n` is the product of all positive integers from 1 to `n`. `!` 
 n! = n(n-1)(n-2)....(3)(2)(1)
 ----
 
+=== Factorial
 .Example Algorithm in Psudedocode
 [source]
 ----

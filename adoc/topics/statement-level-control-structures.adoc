@@ -1,17 +1,17 @@
 = Statements-level control structures
 
-Definition
+== Definition
 
-* Selection Statements
-** two way
-** nesting
-** multi-selection Statements
-* Iteration
-** counting loop
-*** for loops
-** logic loops
-*** while
-** iterators
+== Selection Statements
+=== two way
+=== nesting
+=== multi-selection Statements
+== Iteration
+=== counting loop
+* for loops
+=== logic loops
+* while
+=== iterators
 
-* Branching
-* guarded Statements
+== Branching
+== guarded Statements

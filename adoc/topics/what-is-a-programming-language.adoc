@@ -13,7 +13,7 @@
 == Definition 2
 * A programming language is a notation for writing programs.
 
-.Terms
+=== Definition 2 - Terms
 * _Programs_: Specifications of a computation or algorithm.
 * _Algorithm_: Unambiguous way to solve a problem.
 * _Computation_: A calculation, involving mathematical and/or non-mathematical steps and a well-defined model. For example, an algorithm.
@@ -22,7 +22,7 @@
 == Definition 3
 * A complete description of a programming language includes the computational model, the syntax and semantics of programs, and the pragmatic considerations that shape the language. link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[^5^]
 
-.Terms
+=== Definition 3 - Terms
 * _Computational Model_: A set of value and operations allowed in the language.
 * _Syntax_: Structure and form of the language. (Notation)
 * _Semantics_: The relationship between the syntax and the computational model.

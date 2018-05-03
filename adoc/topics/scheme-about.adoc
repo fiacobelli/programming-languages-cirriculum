@@ -1,8 +1,12 @@
 = About Scheme
+
+== Basics
 * Scheme is a functional programming language
 * Based on LISP
 * Uses tail recursion
 * Strongly and Dynamically Typed
+
+== Sources
 * https://books.google.com/books?id=xyO-KLexVnMC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
 * http://www.scheme-reports.org
 * https://en.wikipedia.org/wiki/Scheme_(programming_language)

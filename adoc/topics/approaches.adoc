@@ -1,21 +1,21 @@
 = Programming Language Approaches
 
-* Object Oriented Programming
-* Functional programming Languages
-** functions as first class citizens
-* Logic programming Languages
-* imperative languages
-* structured Languages
-* blended languages
-* Scripting languages
-* Systems languages
-* Compilers and interpreters
-** compiled vs. interpreted
-** What is the JVM?
-** How about LLVM??
-* Parallelism
-** message passing
-** callbacks
-* dependency managers
-* non-blocking operations
-* Markup languages and DSL
+== Object Oriented Programming
+== Functional programming Languages
+=== functions as first class citizens
+== Logic programming Languages
+== imperative languages
+== structured Languages
+== blended languages
+== Scripting languages
+== Systems languages
+== Compilers and interpreters
+=== compiled vs. interpreted
+=== What is the JVM?
+=== How about LLVM??
+== Parallelism
+=== message passing
+=== callbacks
+== dependency managers
+== non-blocking operations
+== Markup languages and DSL

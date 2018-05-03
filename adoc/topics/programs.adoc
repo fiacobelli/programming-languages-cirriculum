@@ -1,4 +1,5 @@
 = Programs
 
+== About Programs
 * Programs specify a computation
 * A programming language is the notation for writing a program

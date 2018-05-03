@@ -1,13 +1,13 @@
 = Abstraction, Encapsulation, and Generalization
 
-Define:
-* abstraction
-* Encapsulation
-* Generalization
 
-* abstraction
-** data abstraction
-** objects
-* Encapsulation
-** package structures
-** constructors 
+== abstraction
+== Encapsulation
+== Generalization
+
+== abstraction
+=== data abstraction
+=== objects
+== Encapsulation
+=== package structures
+=== constructors

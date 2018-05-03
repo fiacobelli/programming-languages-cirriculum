@@ -2,19 +2,17 @@
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css" : "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css";
-document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Algorithms</h1><div class="preamble"><div class="paragraph"><p><a href="https://en.wikipedia.org/wiki/Algorithm" class="bare">https://en.wikipedia.org/wiki/Algorithm</a></p></div>
-<div class="ulist"><ul><li><p>Method for solving a problem</p></li><li><p>Often implemented by a program, but does not have to be</p></li><li><p>An algorithm can be defined at a high-level, absent of a programming language</p><div class="ulist"><ul><li><p>This is sometimes called pseudocode</p></li></ul></div></li></ul></div></div></section>
+document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script><![endif]--></head><body><div class="reveal"><div class="slides"><section class="title" data-state="title"><h1>Algorithms</h1></section><section id="about_algorithms"><h2>About Algorithms</h2><div class="ulist"><ul><li><p>Method for solving a problem</p></li><li><p>Often implemented by a program, but does not have to be</p></li><li><p>An algorithm can be defined at a high-level, absent of a programming language</p><div class="ulist"><ul><li><p>This is sometimes called pseudocode</p></li></ul></div></li></ul></div>
+<div class="paragraph"><p><a href="https://en.wikipedia.org/wiki/Algorithm" class="bare">https://en.wikipedia.org/wiki/Algorithm</a></p></div></section>
 <section><section id="example_algorithms"><h2>Example Algorithms</h2><div class="ulist"><ul><li><p><a href="https://en.wikipedia.org/wiki/Factorial">Factorial</a></p></li><li><p><a href="https://en.wikipedia.org/wiki/Bubble_sort">Bubble sort</a></p></li><li><p><a href="https://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm">KMP search</a></p></li></ul></div></section><section id="factorial"><h2>Factorial</h2><div class="paragraph"><p><a href="https://en.wikipedia.org/wiki/Factorial" class="bare">https://en.wikipedia.org/wiki/Factorial</a></p></div>
-<div class="paragraph"><p>The factorial of <code>n</code> is the product of all positive integers from 1 to <code>n</code>. <code>!</code> is used to denote factorial.</p></div>
-<div class="listingblock"><div class="title">Example</div><div class="content"><pre class="highlight"><code>0! = 1
+<div class="paragraph"><p>The factorial of <code>n</code> is the product of all positive integers from 1 to <code>n</code>. <code>!</code> is used to denote factorial.</p></div></section><section id="factorial_2"><h2>Factorial</h2><div class="listingblock"><div class="title">Example</div><div class="content"><pre class="highlight"><code>0! = 1
 1! = 1
 2! = 2*1 = 2
 3! = 3*2*1 = 6
 4! = 4*3*2*1= 24
 5! = 5*4*3*2*1 = 120
 ...
-n! = n(n-1)(n-2)....(3)(2)(1)</code></pre></div></div>
-<div class="listingblock"><div class="title">Example Algorithm in Psudedocode</div><div class="content"><pre class="highlight"><code>integer factorial(n)
+n! = n(n-1)(n-2)....(3)(2)(1)</code></pre></div></div></section><section id="factorial_3"><h2>Factorial</h2><div class="listingblock"><div class="title">Example Algorithm in Psudedocode</div><div class="content"><pre class="highlight"><code>integer factorial(n)
 {
   if n is less than 1
     return 1

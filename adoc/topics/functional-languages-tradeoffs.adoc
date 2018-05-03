@@ -1,7 +1,11 @@
-= Pros and Cons - Functional Languages
+= Functional Languages
+
+== Pros
 * Pro: Avoids issues of mutability and state from imperative languages
 * Pro: Eliminates side effects
 * Pro: Excels a problems involving recursion
+
+== Cons
 * Con: Struggles with non-recursive problems
 * Con: Many Functional languages are domain specific and not general purpose
 * Some non-functional languages allow functional concepts

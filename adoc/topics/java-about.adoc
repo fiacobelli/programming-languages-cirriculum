@@ -1,5 +1,6 @@
-= About Java
+= Java
 
+== About
 * The Java programming language is strongly and statically typed.
 * Java is compiled to a bytecode instruction set and run in the Java Virtual Machine.
 

@@ -2,10 +2,10 @@
 Source: Chapter 3.1 - 3.4 ^link:https://github.com/rhoads-zach/programming-languages-cirriculum/blob/master/adoc/topics/sources.adoc[4]^
 
 == Structure of a programming language
-* the form of its expressions, statements, and program units
+* The form of its expressions, statements, and program units
 * A language is composed of strings of chars from some alphabet
 * Each string of chars is called a _sentence_ or _statement_.
-* The syntax defines a set of rules that stipulate which strings of chars from the alphabet are valid statements.
+* The syntax defines a set of rules that stipulate which strings of chars are valid statements.
 
 
 == Lexemes
@@ -170,6 +170,11 @@ index = 2 * count + 17;
 
 
 === Example Derivation: Derivation of _P_
+* Sentential forms
+* Replace until no non-terminals.
+* Last sentential form with no non-terminals is the generated sentence.
+
+=== Example Derivation: Derivation of _P_
 
 [source]
 ----
@@ -186,10 +191,6 @@ index = 2 * count + 17;
           => begin A = B + C ; B = <var> end
           => begin A = B + C ; B = C end
 ----
-
-* Sentential forms
-* Replace until no non-terminals.
-* Last sentential form with no non-terminals is the generated sentence.
 
 === Leftmost vs. Rightmost Derivations
 * Derivations can perform their substitutions either left-first or right-first
@@ -311,6 +312,8 @@ insert diagram
 * BNF and EBNF don't work for describing all part of a language.
 * Certain typing rules are possible, but it would make the grammar cumbersome.
 ** For example integers can be assigned as floats, but not vice-versa.
+
+== Static Semantics
 * Certain things like variable declaration and usage cannot be defined.
 ** For example, a variable must be declared before it can be used.
 * These things are the static semantics of a language.

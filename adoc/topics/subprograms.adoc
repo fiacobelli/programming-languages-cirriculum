@@ -1,34 +1,34 @@
 = Subprograms
 
-Definition
+== Definition
 
-* functions
-* parameters
-** call by value
-** call by reference
-** proceedures v. functions
-** local variables
-** call by result
-** call by value-result
-** call by name
-** type checking
-* functions as parameters
+== functions
+== parameters
+=== call by value
+=== call by reference
+=== proceedures v. functions
+=== local variables
+=== call by result
+=== call by value-result
+=== call by name
+=== type checking
+== functions as parameters
 
-* indirect call subprogram
-* overloaded Subprograms
-* generic Subprograms
-* side effects
-* return types
-* operator overload (redux)
+== indirect call subprogram
+== overloaded Subprograms
+== generic Subprograms
+== side effects
+== return types
+== operator overload (redux)
 
-* closures
-* coroutine
+== closures
+== coroutine
 
-* methods in OOP
-** differnce between methods and functions
+== methods in OOP
+=== differnce between methods and functions
 
 
-* local vars in functions
-* recursive funtions
-* blocks
-* callbacks
+== local vars in functions
+== recursive funtions
+== blocks
+== callbacks
