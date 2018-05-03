@@ -1,0 +1,75 @@
+= Quiz 1
+
+. What is a programming language?
+====
+A programming language is a way to tell some form of a computer how to do work which involves algorithms, math, logic, and other instructions. Programming Languages are usually turning complete.
+====
+
+
+. What would 2 computational models be for doing square root?
+====
+.Option 1
+Values:: Rational (RAT)
+Operations:: `SQRT[RAT]`
+
+.Example Usage
+[source]
+----
+SQRT[9]
+SQRT[3.14]
+SQRT[-50]
+----
+
+.Option 2
+Values:: Rational (NAT)
+Operations:: `SQRT[NAT]`
+
+.Example Usage
+[source]
+----
+SQRT[9]
+SQRT[144]
+SQRT[57]
+----
+====
+
+. Write an algorithm in pseudocode describing how to make change assuming you have 1's, 5's, 10's and 20's. Use the following starter code:
+====
+[source]
+----
+void makeChange(int amount)
+{
+  int ones = 0;
+  int fives = 0;
+  int tens = 0;
+  int twenties = 0;
+
+  twenties = amount / 20
+  amount = amount % 20
+  tens = amount / 10
+  amount = amount % 10
+  fives = amount / 5
+  ones = amount % 5
+}
+----
+====
+
+. Write an algorithm in pseudocode that generates the nth number in a Fibonacci sequence.
+====
+[source]
+----
+int fib(int n)
+{
+  if(n < 3)
+    return 1
+  else
+    int prev = 1
+    int current = 1
+    for int i from 3 to n
+      int temp = current
+      current = current + prev
+      prev = temp
+    return current
+}
+----
+====

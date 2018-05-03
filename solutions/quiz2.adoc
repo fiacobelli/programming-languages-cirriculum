@@ -1,0 +1,25 @@
+= Quiz 2
+
+. What is the difference between syntax and semantics?
+====
+Syntax defines how a language looks. More specifically, its a set of rules that stipulate which strings of chars from the alphabet that are valid statements. Semantics describes relationship between a program and its model of computation.
+====
+
+. What is the difference between strong typing and weak tying?
+====
+Strong typing enforces strict rules where all variables determine their type at compile time. Weak typing has less strict rules that allow variable types to be determined later and can lead to unpredictable results.
+====
+
+. What is the difference between static typing and dynamic typing?
+====
+Static typing allows for a variable's type to be determined by source code analysis before runtime. Dynamic typing determines a variable's type during runtime.
+====
+
+. Give an example declaration using a static typed language.
+====
+`int x = 10;`
+====
+. Give an example declaration using a dynamic typed language.
+====
+`var x = 10;`
+====

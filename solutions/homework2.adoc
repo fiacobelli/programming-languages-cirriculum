@@ -63,10 +63,14 @@
           => begin <stmt>;<stmt_list> end
           => begin <var> = <expression>;<stmt_list> end
           => begin A = <expression>;<stmt_list> end
-          => begin A = <var> - ;<stmt_list> end
-
-          
+          => begin A = <var> - 5; <stmt_list> end
+          => begin A = D - 5; <stmt_list> end
+          => begin A = D - 5; <stmt> end
+          => begin A = D - 5; <var> = <expression> end
+          => begin A = D - 5; B = <expression> end
+          => begin A = D - 5; B = <var> + <var> - <var> + <var>; end
+          => begin A = D - 5; B = B + <var> - <var> + <var>; end
+          => begin A = D - 5; B = B + C - <var> + <var>; end
+          => begin A = D - 5; B = B + C - A + <var>; end
           => begin A = D - 5; B = B + C - A + D; end
 ----
-
-. Create parse trees for the above three derivations.
