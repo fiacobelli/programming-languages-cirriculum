@@ -93,6 +93,10 @@
 
 * link:homework3.html[Homework 3]
 * link:homework4.html[Homework 4]
+* link:https://github.com/rhoads-zach/programming-languages-cirriculum/tree/master/examples/java-app[Lecture - Java REST app]
+* link:https://github.com/rhoads-zach/programming-languages-cirriculum/tree/master/examples/nodejs-app[Lecture - Node.js REST app]
+* link:homework5.html[Homework 5]
+* link:homework6.html[Homework 6]
 * Lecture: link:{slides-base-url}crud.html[CRUD]
 * Lecture: link:{slides-base-url}concurrency.html[Concurrency]
 * Lecture: link:{slides-base-url}events.html[Events]
